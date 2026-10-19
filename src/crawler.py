@@ -1,8 +1,8 @@
 import asyncio
 import logging
-
 import aiohttp
 
+from src.parser import HTMLParser
 
 logging.basicConfig(
     level=logging.INFO,
@@ -71,6 +71,31 @@ class AsyncCrawler:
         results = await asyncio.gather(*tasks)
 
         return dict(zip(urls, results))
+
+    
+    async def fetch_and_parse(self, url: str) -> dict:
+        html = await self.fetch_url(url)
+
+        if not html:
+            return {
+                "url": url,
+                "title": "",
+                "text": "",
+                "links": [],
+                "metadata": {
+                    "title": "",
+                    "description": "",
+                    "keywords": "",
+                },
+                "images": [],
+                "headings": [],
+                "tables": [],
+                "lists": [],
+            }
+
+        parser = HTMLParser()
+        return await parser.parse_html(html, url)
+
 
     async def close(self):
         await self.session.close()

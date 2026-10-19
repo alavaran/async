@@ -117,6 +117,75 @@ class TestAsyncCrawler(unittest.IsolatedAsyncioTestCase):
             "HTML: http://example.com/3",
         )
 
+    
+    async def test_fetch_and_parse(self):
+        html = """
+        <html>
+            <head>
+                <title>Test Page</title>
+                <meta name="description" content="Test description">
+            </head>
+            <body>
+                <h1>Hello</h1>
+                <a href="/books/">Books</a>
+                <img src="book.jpg" alt="Book">
+            </body>
+        </html>
+        """
+
+        async def mock_fetch_url(url):
+            return html
+
+        self.crawler.fetch_url = mock_fetch_url
+
+        result = await self.crawler.fetch_and_parse(
+            "https://example.com/catalog/"
+        )
+
+        self.assertEqual(
+            result["url"],
+            "https://example.com/catalog/",
+        )
+        self.assertEqual(result["title"], "Test Page")
+        self.assertIn("Hello", result["text"])
+        self.assertIn(
+            "https://example.com/books/",
+            result["links"],
+        )
+        self.assertEqual(
+            result["metadata"]["description"],
+            "Test description",
+        )
+        self.assertEqual(
+            result["images"],
+            [{"src": "book.jpg", "alt": "Book"}],
+        )
+        self.assertEqual(
+            result["headings"],
+            [{"tag": "h1", "text": "Hello"}],
+        )
+
+    
+    async def test_fetch_and_parse_failed_download(self):
+        async def mock_fetch_url(url):
+            return ""
+
+        self.crawler.fetch_url = mock_fetch_url
+
+        result = await self.crawler.fetch_and_parse(
+            "https://example.com/unavailable"
+        )
+
+        self.assertEqual(result["url"], "https://example.com/unavailable")
+        self.assertEqual(result["title"], "")
+        self.assertEqual(result["links"], [])
+        self.assertEqual(result["images"], [])
+        self.assertEqual(result["headings"], [])
+        self.assertEqual(result["tables"], [])
+        self.assertEqual(result["lists"], [])
+        self.assertEqual(result["metadata"]["description"], "")
+
+
 
 if __name__ == "__main__":
     unittest.main()

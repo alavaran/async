@@ -2,12 +2,12 @@ import asyncio
 import time
 
 from src.crawler import AsyncCrawler
-from src.parser import BookParser
+from src.parser import HTMLParser
 
 
 async def main():
     crawler = AsyncCrawler(max_concurrent=5)
-    parser = BookParser()
+    parser = HTMLParser()
 
     catalog_url = "http://books.toscrape.com/"
 
