@@ -4,7 +4,10 @@ import logging
 import re
 import time
 import aiohttp
+import random
 
+from src.rate_limiter import RateLimiter
+from src.robots_parser import RobotsParser
 from urllib.parse import urlparse
 from src.queue import CrawlerQueue
 from src.parser import HTMLParser
@@ -22,8 +25,17 @@ class AsyncCrawler:
         self,
         max_concurrent: int = 5,
         max_per_domain: int = 3,
+        requests_per_second: float = 1.0,
+        respect_robots: bool = True,
+        min_delay: float = 0.5,
+        jitter: float = 0.0,
+        user_agent: str = "MyBot/1.0",
     ):
         self.max_concurrent = max_concurrent
+        self.respect_robots = respect_robots
+        self.min_delay = min_delay
+        self.jitter = jitter
+        self.user_agent = user_agent
 
         timeout = aiohttp.ClientTimeout(
             total=20,
@@ -31,56 +43,113 @@ class AsyncCrawler:
             sock_read=10,
         )
 
-        self.session = aiohttp.ClientSession(timeout=timeout)
+        self.session = aiohttp.ClientSession(
+            timeout=timeout,
+            headers={"User-Agent": user_agent},
+        )
 
         self.semaphore_manager = SemaphoreManager(
             max_concurrent=max_concurrent,
             max_per_domain=max_per_domain,
         )
 
+        self.rate_limiter = RateLimiter(
+            requests_per_second=requests_per_second,
+            per_domain=True,
+        )
+
+        self.robots_parser = RobotsParser(
+            self.session,
+            user_agent=user_agent,
+        ) if respect_robots else None
+
         self.parser = HTMLParser()
+
         self.visited_urls: set[str] = set()
         self.failed_urls: dict[str, str] = {}
         self.processed_urls: dict[str, dict] = {}
         self.url_depths: dict[str, int] = {}
 
+        self.blocked_urls: set[str] = set()
+        self.request_timestamps: list[float] = []
+        self.request_delays: list[float] = []
+        self._last_request_time: dict[str, float] = {}
+        self._delay_locks: dict[str, asyncio.Lock] = {}
+
+    async def _wait_for_domain(
+        self,
+        domain: str,
+        crawl_delay: float = 0.0,
+    ) -> None:
+        lock = self._delay_locks.setdefault(domain, asyncio.Lock())
+
+        async with lock:
+            now = time.monotonic()
+            last_request = self._last_request_time.get(domain)
+
+            delay = max(self.min_delay, crawl_delay)
+            delay += random.uniform(0, self.jitter)
+
+            if last_request is not None:
+                wait_time = delay - (now - last_request)
+                if wait_time > 0:
+                    await asyncio.sleep(wait_time)
+
+            actual_time = time.monotonic()
+
+            if last_request is not None:
+                self.request_delays.append(actual_time - last_request)
+
+            self._last_request_time[domain] = actual_time
+            self.request_timestamps.append(actual_time)
+
     async def fetch_url(self, url: str) -> str:
         domain = urlparse(url).netloc
-
         await self.semaphore_manager.acquire(domain)
 
         try:
-            logging.info(f"Начало загрузки: {url}")
+            if self.robots_parser is not None:
+                await self.robots_parser.fetch_robots(url)
 
-            try:
-                async with self.session.get(url) as response:
-                    response.raise_for_status()
-                    content = await response.text()
+                if not self.robots_parser.can_fetch(url, self.user_agent):
+                    logging.warning("Blocked by robots.txt: %s", url)
+                    self.blocked_urls.add(url)
+                    return ""
 
-                    logging.info(
-                        f"Успешно загружено: {url} "
-                        f"(status={response.status})"
-                    )
-
-                    return content
-
-            except aiohttp.ClientResponseError as e:
-                logging.error(
-                    f"HTTP ошибка для {url}: "
-                    f"{e.status} {e.message}"
+                crawl_delay = self.robots_parser.get_crawl_delay(
+                    self.user_agent,
+                    base_url=url,
                 )
-                return ""
+            else:
+                crawl_delay = 0.0
 
-            except asyncio.TimeoutError:
-                logging.error(f"Timeout для {url}")
-                return ""
+            await self.rate_limiter.acquire(domain)
+            await self._wait_for_domain(domain, crawl_delay)
 
-            except aiohttp.ClientError as e:
-                logging.error(
-                    f"Сетевая ошибка для {url}: "
-                    f"{type(e).__name__}: {e!r}"
+            logging.info("Fetching: %s", url)
+
+            async with self.session.get(url) as response:
+                response.raise_for_status()
+                content = await response.text()
+
+                logging.info(
+                    "Fetched %s (status=%s)",
+                    url,
+                    response.status,
                 )
-                return ""
+                return content
+
+        except aiohttp.ClientResponseError as exc:
+            logging.error("HTTP error for %s: %s", url, exc.status)
+            return ""
+
+        except asyncio.TimeoutError:
+            logging.error("Timeout for %s", url)
+            return ""
+
+        except aiohttp.ClientError as exc:
+            logging.error("Network error for %s: %s", url, exc)
+            return ""
 
         finally:
             self.semaphore_manager.release(domain)
