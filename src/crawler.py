@@ -29,12 +29,16 @@ class AsyncCrawler:
         respect_robots: bool = True,
         min_delay: float = 0.5,
         jitter: float = 0.0,
+        max_retries: int = 3,
+        backoff_base: float = 1.0,
         user_agent: str = "MyBot/1.0",
     ):
         self.max_concurrent = max_concurrent
         self.respect_robots = respect_robots
         self.min_delay = min_delay
         self.jitter = jitter
+        self.max_retries = max_retries
+        self.backoff_base = backoff_base
         self.user_agent = user_agent
 
         timeout = aiohttp.ClientTimeout(
@@ -103,8 +107,12 @@ class AsyncCrawler:
             self._last_request_time[domain] = actual_time
             self.request_timestamps.append(actual_time)
 
+
     async def fetch_url(self, url: str) -> str:
         domain = urlparse(url).netloc
+        max_retries = getattr(self, "max_retries", 3)
+        backoff_base = getattr(self, "backoff_base", 1.0)
+
         await self.semaphore_manager.acquire(domain)
 
         try:
@@ -123,36 +131,66 @@ class AsyncCrawler:
             else:
                 crawl_delay = 0.0
 
-            await self.rate_limiter.acquire(domain)
-            await self._wait_for_domain(domain, crawl_delay)
+            for attempt in range(max_retries + 1):
+                await self.rate_limiter.acquire(domain)
+                await self._wait_for_domain(domain, crawl_delay)
 
-            logging.info("Fetching: %s", url)
+                try:
+                    logging.info(
+                        "Fetching %s (attempt %s/%s)",
+                        url,
+                        attempt + 1,
+                        max_retries + 1,
+                    )
 
-            async with self.session.get(url) as response:
-                response.raise_for_status()
-                content = await response.text()
+                    async with self.session.get(url) as response:
+                        response.raise_for_status()
+                        content = await response.text()
 
-                logging.info(
-                    "Fetched %s (status=%s)",
+                        logging.info("Fetched %s", url)
+                        return content
+
+                except aiohttp.ClientResponseError as exc:
+                    # Retry server errors and HTTP 429, but not ordinary 4xx.
+                    retryable = exc.status >= 500 or exc.status == 429
+
+                    if not retryable or attempt >= max_retries:
+                        logging.error(
+                            "HTTP error for %s: %s",
+                            url,
+                            exc.status,
+                        )
+                        return ""
+
+                    error = exc
+
+                except (asyncio.TimeoutError, aiohttp.ClientError) as exc:
+                    if attempt >= max_retries:
+                        logging.error(
+                            "Request failed for %s after retries: %s",
+                            url,
+                            exc,
+                        )
+                        return ""
+
+                    error = exc
+
+                delay = backoff_base * (2 ** attempt)
+                delay += random.uniform(0, max(0.0, self.jitter))
+
+                logging.warning(
+                    "Request failed for %s: %s. Retrying in %.2f seconds",
                     url,
-                    response.status,
+                    error,
+                    delay,
                 )
-                return content
+                await asyncio.sleep(delay)
 
-        except aiohttp.ClientResponseError as exc:
-            logging.error("HTTP error for %s: %s", url, exc.status)
-            return ""
-
-        except asyncio.TimeoutError:
-            logging.error("Timeout for %s", url)
-            return ""
-
-        except aiohttp.ClientError as exc:
-            logging.error("Network error for %s: %s", url, exc)
             return ""
 
         finally:
             self.semaphore_manager.release(domain)
+
 
     def mark_visited(self, url: str, depth: int = 0) -> bool:
         if url in self.visited_urls:
@@ -221,7 +259,7 @@ class AsyncCrawler:
 
         return True
 
-    
+
     async def crawl(
         self,
         start_urls: list[str],
@@ -234,20 +272,14 @@ class AsyncCrawler:
         queue = CrawlerQueue()
         started_at = time.monotonic()
         start_domains = {}
+        results = {}
 
         for url in start_urls:
             if self.mark_visited(url, depth=0):
                 queue.add_url(url)
                 start_domains[url] = urlparse(url).netloc
 
-        results = {}
-
-        while queue.get_stats()["queued"] > 0 and len(results) < max_pages:
-            url = await queue.get_next()
-
-            if url is None:
-                break
-
+        async def process_url(url: str) -> None:
             depth = self.url_depths[url]
 
             try:
@@ -257,14 +289,14 @@ class AsyncCrawler:
                     error = "Failed to fetch or parse page"
                     self.failed_urls[url] = error
                     queue.mark_failed(url, error)
-                    continue
+                    return
 
                 results[url] = page
                 self.processed_urls[url] = page
                 queue.mark_processed(url)
 
                 if depth >= max_depth:
-                    continue
+                    return
 
                 start_domain = start_domains.get(
                     url,
@@ -288,15 +320,43 @@ class AsyncCrawler:
                         start_domains[link] = start_domain
                         queue.add_url(link)
 
-            except Exception as e:
+            except Exception as exc:
                 logging.exception("Unexpected error crawling %s", url)
-                self.failed_urls[url] = str(e)
-                queue.mark_failed(url, str(e))
+                self.failed_urls[url] = str(exc)
+                queue.mark_failed(url, str(exc))
 
-            finally:
-                logging.info("Crawl progress: %s", self.get_progress(started_at, queue))
+        scheduled = 0
+
+        while scheduled < max_pages:
+            batch = []
+
+            while (
+                len(batch) < getattr(self, "max_concurrent", 5)
+                and scheduled + len(batch) < max_pages
+            ):
+                url = await queue.get_next()
+
+                if url is None:
+                    break
+
+                batch.append(url)
+
+            if not batch:
+                break
+
+            scheduled += len(batch)
+
+            await asyncio.gather(
+                *(process_url(url) for url in batch)
+            )
+
+            logging.info(
+                "Crawl progress: %s",
+                self.get_progress(started_at, queue),
+            )
 
         return results
+
 
     def get_progress(
         self,
@@ -314,3 +374,25 @@ class AsyncCrawler:
             "pages_per_second": round(processed / elapsed, 2),
         }
 
+
+    def get_rate_stats(self) -> dict:
+        now = time.monotonic()
+
+        # Count requests made in the last 60 seconds.
+        recent_requests = [
+            timestamp
+            for timestamp in self.request_timestamps
+            if now - timestamp <= 60
+        ]
+
+        average_delay = (
+            sum(self.request_delays) / len(self.request_delays)
+            if self.request_delays
+            else 0.0
+        )
+
+        return {
+            "requests_last_minute": len(recent_requests),
+            "average_delay_seconds": round(average_delay, 3),
+            "blocked_urls": len(self.blocked_urls),
+        }

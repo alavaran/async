@@ -42,6 +42,9 @@ async def main():
         print(f"Failed URLs: {len(crawler.failed_urls)}")
         print(f"Visited URLs: {len(crawler.visited_urls)}")
         print("Results saved to crawl_results.json")
+        print("\n=== Rate Limiting Statistics ===")
+        print(crawler.get_rate_stats())
+        print(f"Blocked URLs: {sorted(crawler.blocked_urls)}")
 
     finally:
         await crawler.close()

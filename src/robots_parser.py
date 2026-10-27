@@ -44,24 +44,24 @@ class RobotsParser:
 
             try:
                 async with self.session.get(robots_url) as response:
-                    if response.status == 200:
+                    status = response.status
+
+                    if status == 200:
                         content = await response.text()
                         parser.parse(content.splitlines())
 
-                    elif 400 <= response.status < 500:
-                        # A missing robots.txt (404) does not prohibit crawling.
+                    elif isinstance(status, int) and 400 <= status < 500:
                         logger.info(
                             "robots.txt unavailable (HTTP %s): %s",
-                            response.status,
+                            status,
                             robots_url,
                         )
                         parser.parse([])
 
                     else:
-                        # Server errors: fail closed and avoid crawling.
                         logger.warning(
                             "robots.txt returned HTTP %s for %s",
-                            response.status,
+                            status,
                             robots_url,
                         )
                         parser.parse(["User-agent: *", "Disallow: /"])
