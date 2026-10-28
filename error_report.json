@@ -1,0 +1,10 @@
+{
+    "failed_urls": [],
+    "blocked_urls": [],
+    "retry_stats": {
+        "errors_by_type": {},
+        "successful_retries": 0,
+        "average_retry_delay_seconds": 0.0,
+        "permanent_error_urls": []
+    }
+}

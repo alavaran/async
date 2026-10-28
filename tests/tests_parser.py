@@ -228,4 +228,6 @@ class TestHTMLParser(unittest.TestCase):
             [{"src": "book.jpg", "alt": "Book"}],
         )
 
+if __name__ == "__main__":
+    unittest.main()
 

@@ -6,6 +6,12 @@ import time
 import aiohttp
 import random
 
+from src.retry_strategy import RetryStrategy
+from src.exceptions import (
+    TransientError,
+    PermanentError,
+    NetworkError,
+)
 from src.rate_limiter import RateLimiter
 from src.robots_parser import RobotsParser
 from urllib.parse import urlparse
@@ -30,8 +36,12 @@ class AsyncCrawler:
         min_delay: float = 0.5,
         jitter: float = 0.0,
         max_retries: int = 3,
+        connect_timeout: float = 10.0,
+        read_timeout: float = 10.0,
+        total_timeout: float = 20.0,
         backoff_base: float = 1.0,
         user_agent: str = "MyBot/1.0",
+        retry_strategy: RetryStrategy | None = None,
     ):
         self.max_concurrent = max_concurrent
         self.respect_robots = respect_robots
@@ -40,11 +50,21 @@ class AsyncCrawler:
         self.max_retries = max_retries
         self.backoff_base = backoff_base
         self.user_agent = user_agent
+        self.retry_strategy = retry_strategy or RetryStrategy(
+            max_retries=max_retries,
+            backoff_factor=backoff_base,
+        )
+        self.blocked_urls: set[str] = set()
+        self.request_timestamps: list[float] = []
+        self.request_delays: list[float] = []
+        self.connect_timeout = connect_timeout
+        self.read_timeout = read_timeout
+        self.total_timeout = total_timeout
 
         timeout = aiohttp.ClientTimeout(
-            total=20,
-            connect=10,
-            sock_read=10,
+            total=self.total_timeout,
+            connect=self.connect_timeout,
+            sock_read=self.read_timeout,
         )
 
         self.session = aiohttp.ClientSession(
@@ -109,87 +129,28 @@ class AsyncCrawler:
 
 
     async def fetch_url(self, url: str) -> str:
-        domain = urlparse(url).netloc
-        max_retries = getattr(self, "max_retries", 3)
-        backoff_base = getattr(self, "backoff_base", 1.0)
+        """Fetch a URL using the configured retry strategy."""
+        strategy = getattr(self, "retry_strategy", None)
 
-        await self.semaphore_manager.acquire(domain)
+        if strategy is None:
+            strategy = RetryStrategy(
+                max_retries=getattr(self, "max_retries", 3),
+                backoff_factor=getattr(self, "backoff_base", 1.0),
+            )
 
         try:
-            if self.robots_parser is not None:
-                await self.robots_parser.fetch_robots(url)
+            return await strategy.execute_with_retry(
+                self._fetch_url_once,
+                url,
+            )
 
-                if not self.robots_parser.can_fetch(url, self.user_agent):
-                    logging.warning("Blocked by robots.txt: %s", url)
-                    self.blocked_urls.add(url)
-                    return ""
-
-                crawl_delay = self.robots_parser.get_crawl_delay(
-                    self.user_agent,
-                    base_url=url,
-                )
-            else:
-                crawl_delay = 0.0
-
-            for attempt in range(max_retries + 1):
-                await self.rate_limiter.acquire(domain)
-                await self._wait_for_domain(domain, crawl_delay)
-
-                try:
-                    logging.info(
-                        "Fetching %s (attempt %s/%s)",
-                        url,
-                        attempt + 1,
-                        max_retries + 1,
-                    )
-
-                    async with self.session.get(url) as response:
-                        response.raise_for_status()
-                        content = await response.text()
-
-                        logging.info("Fetched %s", url)
-                        return content
-
-                except aiohttp.ClientResponseError as exc:
-                    # Retry server errors and HTTP 429, but not ordinary 4xx.
-                    retryable = exc.status >= 500 or exc.status == 429
-
-                    if not retryable or attempt >= max_retries:
-                        logging.error(
-                            "HTTP error for %s: %s",
-                            url,
-                            exc.status,
-                        )
-                        return ""
-
-                    error = exc
-
-                except (asyncio.TimeoutError, aiohttp.ClientError) as exc:
-                    if attempt >= max_retries:
-                        logging.error(
-                            "Request failed for %s after retries: %s",
-                            url,
-                            exc,
-                        )
-                        return ""
-
-                    error = exc
-
-                delay = backoff_base * (2 ** attempt)
-                delay += random.uniform(0, max(0.0, self.jitter))
-
-                logging.warning(
-                    "Request failed for %s: %s. Retrying in %.2f seconds",
-                    url,
-                    error,
-                    delay,
-                )
-                await asyncio.sleep(delay)
-
+        except PermanentError as exc:
+            logging.error("Permanent failure for %s: %s", url, exc)
             return ""
 
-        finally:
-            self.semaphore_manager.release(domain)
+        except (TransientError, NetworkError) as exc:
+            logging.error("Request failed after retries for %s: %s", url, exc)
+            return ""
 
 
     def mark_visited(self, url: str, depth: int = 0) -> bool:
@@ -395,4 +356,104 @@ class AsyncCrawler:
             "requests_last_minute": len(recent_requests),
             "average_delay_seconds": round(average_delay, 3),
             "blocked_urls": len(self.blocked_urls),
+        }
+
+
+    async def _fetch_url_once(
+        self,
+        url: str,
+        _retry_attempt: int = 0,
+    ) -> str:
+        """Perform one HTTP request and classify its errors."""
+        domain = urlparse(url).netloc
+
+        await self.semaphore_manager.acquire(domain)
+
+        try:
+            # Check robots.txt before requesting the page.
+            if self.robots_parser is not None:
+                await self.robots_parser.fetch_robots(url)
+
+                if not self.robots_parser.can_fetch(
+                    url, self.user_agent
+                ):
+                    logging.warning("Blocked by robots.txt: %s", url)
+                    self.blocked_urls.add(url)
+                    return ""
+
+                crawl_delay = self.robots_parser.get_crawl_delay(
+                    self.user_agent,
+                    base_url=url,
+                )
+            else:
+                crawl_delay = 0.0
+
+            await self.rate_limiter.acquire(domain)
+            await self._wait_for_domain(domain, crawl_delay)
+
+            # Increase timeouts exponentially on each retry.
+            timeout_multiplier = 2 ** _retry_attempt
+
+            timeout = aiohttp.ClientTimeout(
+                total=getattr(self, "total_timeout", 20.0) * timeout_multiplier,
+                connect=getattr(self, "connect_timeout", 10.0) * timeout_multiplier,
+                sock_read=getattr(self, "read_timeout", 10.0) * timeout_multiplier,
+            )
+
+            logging.info(
+                "Fetching %s (attempt %s, timeout multiplier x%s)",
+                url,
+                _retry_attempt + 1,
+                timeout_multiplier,
+            )
+
+            try:
+                async with self.session.get(
+                    url,
+                    timeout=timeout,
+                ) as response:
+                    response.raise_for_status()
+                    content = await response.text()
+
+                    logging.info("Fetched %s", url)
+                    return content
+
+            except aiohttp.ClientResponseError as exc:
+                if exc.status == 429 or exc.status >= 500:
+                    raise TransientError(
+                        f"Temporary HTTP error {exc.status}: {url}"
+                    ) from exc
+
+                raise PermanentError(
+                    f"Permanent HTTP error {exc.status}: {url}"
+                ) from exc
+
+            except asyncio.TimeoutError as exc:
+                raise TransientError(
+                    f"Request timed out: {url}"
+                ) from exc
+
+            except aiohttp.ClientError as exc:
+                raise NetworkError(
+                    f"Network error for {url}: {exc}"
+                ) from exc
+
+        finally:
+            self.semaphore_manager.release(domain)
+
+
+    def get_error_stats(self) -> dict:
+        """Return crawler and retry error statistics."""
+        strategy = getattr(self, "retry_strategy", None)
+
+        retry_stats = (
+            strategy.get_stats()
+            if strategy is not None
+            else {}
+        )
+
+        return {
+            "failed_urls": sorted(self.failed_urls),
+            "blocked_urls": sorted(self.blocked_urls),
+            "retry_stats": retry_stats,
         }

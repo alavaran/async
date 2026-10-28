@@ -3,13 +3,23 @@ import asyncio
 import json
 import logging
 
+from src.retry_strategy import RetryStrategy
 from src.crawler import AsyncCrawler
 
 
 async def main():
+    retry_strategy = RetryStrategy(
+        max_retries=3,
+        backoff_factor=1.0,
+    )
+
     crawler = AsyncCrawler(
-        max_concurrent=10,
+        max_concurrent=5,
         max_per_domain=3,
+        requests_per_second=1.0,
+        respect_robots=True,
+        min_delay=0.5,
+        retry_strategy=retry_strategy,
     )
 
     start_urls = [
@@ -45,6 +55,13 @@ async def main():
         print("\n=== Rate Limiting Statistics ===")
         print(crawler.get_rate_stats())
         print(f"Blocked URLs: {sorted(crawler.blocked_urls)}")
+        with open("error_report.json", "w", encoding="utf-8") as file:
+            json.dump(
+                crawler.get_error_stats(),
+                file,
+                ensure_ascii=False,
+                indent=4,
+            )
 
     finally:
         await crawler.close()
