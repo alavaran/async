@@ -18,7 +18,8 @@ from urllib.parse import urlparse
 from src.queue import CrawlerQueue
 from src.parser import HTMLParser
 from src.semaphore_manager import SemaphoreManager
-
+from src.storage import DataStorage
+from datetime import datetime, timezone
 
 logging.basicConfig(
     level=logging.INFO,
@@ -42,6 +43,7 @@ class AsyncCrawler:
         backoff_base: float = 1.0,
         user_agent: str = "MyBot/1.0",
         retry_strategy: RetryStrategy | None = None,
+        storage: DataStorage | None = None,
     ):
         self.max_concurrent = max_concurrent
         self.respect_robots = respect_robots
@@ -60,6 +62,10 @@ class AsyncCrawler:
         self.connect_timeout = connect_timeout
         self.read_timeout = read_timeout
         self.total_timeout = total_timeout
+        self.storage = storage
+        self.saved_pages = 0
+        self.storage_errors = []
+
 
         timeout = aiohttp.ClientTimeout(
             total=self.total_timeout,
@@ -189,8 +195,36 @@ class AsyncCrawler:
 
         return await self.parser.parse_html(html, url)
 
+    async def _save_page(self, url: str, page: dict) -> None:
+        if self.storage is None:
+            return
+
+        record = {
+            "url": url,
+            "title": page.get("title", ""),
+            "text": page.get("text", ""),
+            "links": page.get("links", []),
+            "metadata": page.get("metadata", {}),
+            "crawled_at": datetime.now(timezone.utc).isoformat(),
+        }
+
+        try:
+            await self.storage.save(record)
+            self.saved_pages += 1
+
+        except Exception as exc:
+            logging.exception("Failed to save page: %s", url)
+            self.storage_errors.append({
+                "url": url,
+                "error": str(exc),
+            })
+
     async def close(self):
-        await self.session.close()
+        try:
+            await self.session.close()
+        finally:
+            if self.storage is not None:
+                await self.storage.close()
     
     def should_crawl(
         self,
@@ -254,6 +288,9 @@ class AsyncCrawler:
 
                 results[url] = page
                 self.processed_urls[url] = page
+
+                await self._save_page(url, page)
+
                 queue.mark_processed(url)
 
                 if depth >= max_depth:
