@@ -206,6 +206,8 @@ class SQLiteStorage(DataStorage):
         self,
         filepath: str | Path = "crawler.db",
         batch_size: int = 100,
+        max_retries: int = 3,
+        retry_delay: float = 0.5,
     ) -> None:
         if batch_size < 1:
             raise ValueError("batch_size must be >= 1")
@@ -216,6 +218,14 @@ class SQLiteStorage(DataStorage):
         self._buffer: list[dict[str, Any]] = []
         self._lock = asyncio.Lock()
         self._closed = False
+        if max_retries < 0:
+            raise ValueError("max_retries must be >= 0")
+
+        if retry_delay < 0:
+            raise ValueError("retry_delay must be >= 0")
+
+        self.max_retries = max_retries
+        self.retry_delay = retry_delay
 
     async def init_db(self) -> None:
         """Create the database table and indexes."""
@@ -270,7 +280,7 @@ class SQLiteStorage(DataStorage):
                 await self._flush_locked()
 
     async def _flush_locked(self) -> None:
-        """Write buffered records in one transaction. Caller holds the lock."""
+        """Write buffered records in one transaction with retries."""
         if not self._buffer:
             return
 
@@ -284,38 +294,74 @@ class SQLiteStorage(DataStorage):
                 item["url"],
                 item.get("title"),
                 item.get("text"),
-                json.dumps(item.get("links", []), ensure_ascii=False, default=str),
-                json.dumps(item.get("metadata", {}), ensure_ascii=False, default=str),
-                str(item["crawled_at"]) if item.get("crawled_at") is not None else None,
+                json.dumps(
+                    item.get("links", []),
+                    ensure_ascii=False,
+                    default=str,
+                ),
+                json.dumps(
+                    item.get("metadata", {}),
+                    ensure_ascii=False,
+                    default=str,
+                ),
+                str(item["crawled_at"])
+                if item.get("crawled_at") is not None else None,
                 item.get("status_code"),
                 item.get("content_type"),
             )
             for item in records
         ]
 
-        try:
-            await self._connection.executemany("""
-                INSERT INTO crawled_pages (
-                    url, title, text, links, metadata,
-                    crawled_at, status_code, content_type
+        for attempt in range(self.max_retries + 1):
+            try:
+                await self._connection.executemany("""
+                    INSERT INTO crawled_pages (
+                        url, title, text, links, metadata,
+                        crawled_at, status_code, content_type
+                    )
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                    ON CONFLICT(url, crawled_at) DO UPDATE SET
+                        title = excluded.title,
+                        text = excluded.text,
+                        links = excluded.links,
+                        metadata = excluded.metadata,
+                        status_code = excluded.status_code,
+                        content_type = excluded.content_type
+                """, rows)
+
+                await self._connection.commit()
+
+                # Clear the buffer only after a successful commit.
+                del self._buffer[:len(records)]
+
+                logger.info(
+                    "SQLite batch saved: %s records",
+                    len(records),
                 )
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-                ON CONFLICT(url, crawled_at) DO UPDATE SET
-                    title = excluded.title,
-                    text = excluded.text,
-                    links = excluded.links,
-                    metadata = excluded.metadata,
-                    status_code = excluded.status_code,
-                    content_type = excluded.content_type
-            """, rows)
+                return
 
-            await self._connection.commit()
-            del self._buffer[:len(records)]
+            except Exception:
+                logger.exception(
+                    "SQLite flush failed (attempt %s/%s)",
+                    attempt + 1,
+                    self.max_retries + 1,
+                )
 
-        except Exception:
-            await self._connection.rollback()
-            logger.exception("Failed to flush SQLite batch")
-            raise
+                try:
+                    await self._connection.rollback()
+                except Exception:
+                    logger.exception("SQLite rollback failed")
+
+                if attempt >= self.max_retries:
+                    logger.error(
+                        "SQLite flush failed after all retries. "
+                        "%s records remain in buffer.",
+                        len(records),
+                    )
+                    raise
+
+                delay = self.retry_delay * (2 ** attempt)
+                await asyncio.sleep(delay)
 
     async def flush(self) -> None:
         """Write all buffered records."""
@@ -352,8 +398,22 @@ class SQLiteStorage(DataStorage):
         async with self._lock:
             try:
                 await self._flush_locked()
+
+            except Exception:
+                logger.exception(
+                    "Failed to flush SQLite buffer during close. "
+                    "%s records were not saved.",
+                    len(self._buffer),
+                )
+
             finally:
                 if self._connection is not None:
-                    await self._connection.close()
-                    self._connection = None
+                    try:
+                        await self._connection.close()
+                    except Exception:
+                        logger.exception("Failed to close SQLite connection")
+                        raise
+                    finally:
+                        self._connection = None
+
                 self._closed = True

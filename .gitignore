@@ -5,3 +5,9 @@ __pycache__/
 
 # Generated crawl results
 crawl_results.json
+
+# Crawler output
+/crawler.db
+/error_report.json
+/results.csv
+/results.jsonl

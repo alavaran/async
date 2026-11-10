@@ -65,7 +65,7 @@ class AsyncCrawler:
         self.storage = storage
         self.saved_pages = 0
         self.storage_errors = []
-
+        self.response_metadata: dict[str, dict] = {}
 
         timeout = aiohttp.ClientTimeout(
             total=self.total_timeout,
@@ -196,8 +196,10 @@ class AsyncCrawler:
         return await self.parser.parse_html(html, url)
 
     async def _save_page(self, url: str, page: dict) -> None:
-        if self.storage is None:
+        if getattr(self, "storage", None) is None:
             return
+
+        http_metadata = self.response_metadata.get(url, {})
 
         record = {
             "url": url,
@@ -206,6 +208,8 @@ class AsyncCrawler:
             "links": page.get("links", []),
             "metadata": page.get("metadata", {}),
             "crawled_at": datetime.now(timezone.utc).isoformat(),
+            "status_code": http_metadata.get("status_code"),
+            "content_type": http_metadata.get("content_type"),
         }
 
         try:
@@ -451,6 +455,14 @@ class AsyncCrawler:
                 ) as response:
                     response.raise_for_status()
                     content = await response.text()
+
+                    if not hasattr(self, "response_metadata"):
+                        self.response_metadata = {}
+
+                    self.response_metadata[url] = {
+                        "status_code": response.status,
+                        "content_type": response.headers.get("Content-Type"),
+                    }
 
                     logging.info("Fetched %s", url)
                     return content
