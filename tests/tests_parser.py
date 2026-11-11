@@ -1,7 +1,10 @@
 
 import unittest
-from src.parser import HTMLParser
+
 from bs4 import BeautifulSoup
+
+from src.parser import HTMLParser
+
 
 class TestHTMLParser(unittest.TestCase):
 

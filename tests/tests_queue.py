@@ -1,6 +1,6 @@
 
-import unittest
 import asyncio
+import unittest
 
 from src.queue import CrawlerQueue
 

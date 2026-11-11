@@ -1,13 +1,16 @@
-import logging
 
-from urllib.parse import urljoin
+import logging
+from urllib.parse import urljoin, urlparse
+
 from bs4 import BeautifulSoup
+from bs4.exceptions import FeatureNotFound, ParserRejectedMarkup
+
+logger = logging.getLogger(__name__)
 
 
 class HTMLParser:
     def parse(self, html: str) -> dict[str, str]:
         soup = BeautifulSoup(html, "lxml")
-
         table = soup.find("table", class_="table-striped")
 
         if table is None:
@@ -23,7 +26,6 @@ class HTMLParser:
 
             key = cells[0].get_text(strip=True)
             value = cells[1].get_text(strip=True)
-
             data[key] = value
 
         return {
@@ -42,7 +44,6 @@ class HTMLParser:
         base_url: str = "http://books.toscrape.com/",
     ) -> list[str]:
         soup = BeautifulSoup(html, "lxml")
-
         urls = []
 
         for link in soup.select("article.product_pod h3 a"):
@@ -51,7 +52,7 @@ class HTMLParser:
             if href:
                 urls.append(urljoin(base_url, href))
 
-        return urls    
+        return urls
 
     def extract_links(
         self,
@@ -59,11 +60,12 @@ class HTMLParser:
         base_url: str,
         internal_only: bool = False,
     ) -> list[str]:
-        from urllib.parse import urljoin, urlparse
-
         base_parsed = urlparse(base_url)
 
-        if base_parsed.scheme not in ("http", "https") or not base_parsed.netloc:
+        if (
+            base_parsed.scheme not in ("http", "https")
+            or not base_parsed.netloc
+        ):
             return []
 
         links = []
@@ -77,34 +79,47 @@ class HTMLParser:
             absolute_url = urljoin(base_url, href)
             parsed_url = urlparse(absolute_url)
 
-            if parsed_url.scheme not in ("http", "https") or not parsed_url.netloc:
+            if (
+                parsed_url.scheme not in ("http", "https")
+                or not parsed_url.netloc
+            ):
                 continue
 
-            if internal_only and parsed_url.netloc != base_parsed.netloc:
+            if (
+                internal_only
+                and parsed_url.netloc != base_parsed.netloc
+            ):
                 continue
 
             links.append(absolute_url)
 
         return list(dict.fromkeys(links))
-    
+
     def extract_text(
         self,
         soup: BeautifulSoup,
-        selector: str = None,
+        selector: str | None = None,
     ) -> str:
         if selector:
             element = soup.select_one(selector)
+
             if element is None:
                 return ""
+
             return element.get_text(" ", strip=True)
 
         return soup.get_text(" ", strip=True)
 
-    
     def extract_metadata(self, soup: BeautifulSoup) -> dict:
         title_tag = soup.find("title")
-        description_tag = soup.find("meta", attrs={"name": "description"})
-        keywords_tag = soup.find("meta", attrs={"name": "keywords"})
+        description_tag = soup.find(
+            "meta",
+            attrs={"name": "description"},
+        )
+        keywords_tag = soup.find(
+            "meta",
+            attrs={"name": "keywords"},
+        )
 
         return {
             "title": title_tag.get_text(strip=True) if title_tag else "",
@@ -118,7 +133,6 @@ class HTMLParser:
             ),
         }
 
-    
     async def parse_html(self, html: str, url: str) -> dict:
         try:
             soup = BeautifulSoup(html, "lxml")
@@ -138,9 +152,8 @@ class HTMLParser:
                 "lists": self.extract_lists(soup),
             }
 
-
-        except Exception as error:
-            logging.warning(
+        except (FeatureNotFound, ParserRejectedMarkup) as error:
+            logger.warning(
                 "Ошибка парсинга HTML для %s: %s",
                 url,
                 error,
@@ -158,7 +171,6 @@ class HTMLParser:
                 },
             }
 
-    
     def extract_images(self, soup: BeautifulSoup) -> list[dict[str, str]]:
         images = []
 
@@ -213,4 +225,3 @@ class HTMLParser:
             })
 
         return lists
-

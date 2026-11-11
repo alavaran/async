@@ -1,12 +1,12 @@
 import unittest
-import aiohttp
 from unittest.mock import AsyncMock, MagicMock, patch
+
+import aiohttp
 
 from src.crawler import AsyncCrawler
 from src.exceptions import (
-    TransientError,
     PermanentError,
-    NetworkError,
+    TransientError,
 )
 
 
@@ -109,7 +109,7 @@ class TestCrawlerRetry(unittest.IsolatedAsyncioTestCase):
         self.crawler.semaphore_manager.release.assert_called_once()
 
     async def test_timeout_increases_on_retry(self):
-        from unittest.mock import AsyncMock, MagicMock, patch
+        from unittest.mock import AsyncMock, MagicMock
 
         self.crawler.connect_timeout = 5
         self.crawler.read_timeout = 10

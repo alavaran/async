@@ -1,16 +1,16 @@
 import asyncio
+import inspect
+import json
 import logging
 import time
-import json
-import inspect
-
 from collections import defaultdict
-from typing import Callable, Coroutine, Any
+from collections.abc import Callable, Coroutine
+from typing import Any
+
 from src.exceptions import (
-    CrawlerError,
-    TransientError,
-    PermanentError,
     NetworkError,
+    PermanentError,
+    TransientError,
 )
 
 logger = logging.getLogger(__name__)

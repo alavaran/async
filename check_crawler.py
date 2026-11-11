@@ -1,4 +1,5 @@
 import asyncio
+
 from src.crawler import AsyncCrawler
 
 

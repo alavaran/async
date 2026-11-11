@@ -1,0 +1,154 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Crawler Report</title>
+
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background: #f4f6f9;
+                    margin: 0;
+                    padding: 30px;
+                    color: #222;
+                }
+
+                .container {
+                    max-width: 1000px;
+                    margin: auto;
+                }
+
+                h1, h2 {
+                    color: #263238;
+                }
+
+                .metrics {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                    gap: 15px;
+                    margin: 25px 0;
+                }
+
+                .card {
+                    background: white;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+                }
+
+                .value {
+                    font-size: 26px;
+                    font-weight: bold;
+                    margin-top: 10px;
+                }
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    background: white;
+                    margin-bottom: 30px;
+                }
+
+                th, td {
+                    padding: 12px;
+                    text-align: left;
+                    border-bottom: 1px solid #eee;
+                }
+
+                th {
+                    background: #263238;
+                    color: white;
+                }
+
+                .bar {
+                    background: #e8edf2;
+                    height: 12px;
+                    border-radius: 6px;
+                    overflow: hidden;
+                }
+
+                .bar-fill {
+                    background: #3498db;
+                    height: 100%;
+                }
+            </style>
+        </head>
+
+        <body>
+            <div class="container">
+                <h1>Crawler Report</h1>
+
+                <div class="metrics">
+                    <div class="card">
+                        Pages processed
+                        <div class="value">10</div>
+                    </div>
+
+                    <div class="card">
+                        Successful pages
+                        <div class="value">10</div>
+                    </div>
+
+                    <div class="card">
+                        Failed pages
+                        <div class="value">0</div>
+                    </div>
+
+                    <div class="card">
+                        Runtime
+                        <div class="value">5.83 sec</div>
+                    </div>
+
+                    <div class="card">
+                        Pages per second
+                        <div class="value">1.72</div>
+                    </div>
+                </div>
+
+                <h2>HTTP Status Distribution</h2>
+
+                <table>
+                    <tr>
+                        <th>Status</th>
+                        <th>Count</th>
+                        <th>Distribution</th>
+                    </tr>
+                    
+                <tr>
+                    <td>200</td>
+                    <td>10</td>
+                    <td>
+                        <div class="bar">
+                            <div class="bar-fill" style="width: 100.0%"></div>
+                        </div>
+                    </td>
+                </tr>
+            
+                </table>
+
+                <h2>Top Domains</h2>
+
+                <table>
+                    <tr>
+                        <th>Domain</th>
+                        <th>Pages</th>
+                        <th>Distribution</th>
+                    </tr>
+                    
+                <tr>
+                    <td>books.toscrape.com</td>
+                    <td>10</td>
+                    <td>
+                        <div class="bar">
+                            <div class="bar-fill" style="width: 100.0%"></div>
+                        </div>
+                    </td>
+                </tr>
+            
+                </table>
+            </div>
+        </body>
+        </html>
+        

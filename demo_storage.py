@@ -6,8 +6,7 @@ import logging
 from pathlib import Path
 
 from src.crawler import AsyncCrawler
-from src.storage import JSONStorage, CSVStorage, SQLiteStorage
-
+from src.storage import CSVStorage, JSONStorage, SQLiteStorage
 
 logging.basicConfig(
     level=logging.INFO,

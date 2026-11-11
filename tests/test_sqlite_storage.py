@@ -1,7 +1,7 @@
 
 import tempfile
 import unittest
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from src.storage import SQLiteStorage
@@ -25,7 +25,7 @@ class TestSQLiteStorage(unittest.IsolatedAsyncioTestCase):
             "text": "Текст страницы",
             "links": ["https://example.org"],
             "metadata": {"language": "ru"},
-            "crawled_at": datetime.now(timezone.utc).isoformat(),
+            "crawled_at": datetime.now(UTC).isoformat(),
             "status_code": 200,
             "content_type": "text/html",
         }

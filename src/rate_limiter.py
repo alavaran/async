@@ -19,7 +19,7 @@ class RateLimiter:
         self._last_request = {}
         self._state_lock = asyncio.Lock()
 
-    async def acquire(self, domain: str = None) -> None:
+    async def acquire(self, domain: str | None = None) -> None:
         key = domain if self.per_domain else "global"
 
         async with self._state_lock:

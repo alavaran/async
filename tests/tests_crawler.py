@@ -1,4 +1,3 @@
-import asyncio
 import unittest
 from unittest.mock import AsyncMock, MagicMock, patch
 
@@ -68,7 +67,7 @@ class TestAsyncCrawler(unittest.IsolatedAsyncioTestCase):
     async def test_fetch_timeout(self):
         response_context = MagicMock()
         response_context.__aenter__ = AsyncMock(
-            side_effect=asyncio.TimeoutError()
+            side_effect=TimeoutError()
         )
         response_context.__aexit__ = AsyncMock(return_value=None)
 

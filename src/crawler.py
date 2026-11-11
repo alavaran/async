@@ -1,30 +1,31 @@
 
 import asyncio
 import logging
+import random
 import re
 import time
-import aiohttp
-import random
-
-from src.retry_strategy import RetryStrategy
-from src.exceptions import (
-    TransientError,
-    PermanentError,
-    NetworkError,
-)
-from src.rate_limiter import RateLimiter
-from src.robots_parser import RobotsParser
+from datetime import UTC, datetime
 from urllib.parse import urlparse
-from src.queue import CrawlerQueue
-from src.parser import HTMLParser
-from src.semaphore_manager import SemaphoreManager
-from src.storage import DataStorage
-from datetime import datetime, timezone
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
+import aiohttp
+
+from src.exceptions import (
+    NetworkError,
+    PermanentError,
+    TransientError,
 )
+from src.monitor import CrawlerMonitor
+from src.parser import HTMLParser
+from src.queue import CrawlerQueue
+from src.rate_limiter import RateLimiter
+from src.retry_strategy import RetryStrategy
+from src.robots_parser import RobotsParser
+from src.semaphore_manager import SemaphoreManager
+from src.sitemap import SitemapParser
+from src.stats import CrawlerStats
+from src.storage import DataStorage
+
+logger = logging.getLogger(__name__)
 
 
 class AsyncCrawler:
@@ -98,6 +99,7 @@ class AsyncCrawler:
         self.visited_urls: set[str] = set()
         self.failed_urls: dict[str, str] = {}
         self.processed_urls: dict[str, dict] = {}
+        self.stats = CrawlerStats()
         self.url_depths: dict[str, int] = {}
 
         self.blocked_urls: set[str] = set()
@@ -151,11 +153,11 @@ class AsyncCrawler:
             )
 
         except PermanentError as exc:
-            logging.error("Permanent failure for %s: %s", url, exc)
+            logger.error("Permanent failure for %s: %s", url, exc)
             return ""
 
         except (TransientError, NetworkError) as exc:
-            logging.error("Request failed after retries for %s: %s", url, exc)
+            logger.error("Request failed after retries for %s: %s", url, exc)
             return ""
 
 
@@ -175,6 +177,20 @@ class AsyncCrawler:
 
     async def fetch_and_parse(self, url: str) -> dict:
         html = await self.fetch_url(url)
+
+        # Получаем HTTP-статус последней попытки.
+        response_metadata = getattr(self, "response_metadata", {})
+        status_code = response_metadata.get(url, {}).get("status_code")
+
+        # Учитываем URL один раз после завершения retry.
+        stats = getattr(self, "stats", None)
+
+        if stats is not None:
+            stats.record_page(
+                url=url,
+                status_code=status_code,
+                success=bool(html),
+            )
 
         if not html:
             return {
@@ -207,7 +223,7 @@ class AsyncCrawler:
             "text": page.get("text", ""),
             "links": page.get("links", []),
             "metadata": page.get("metadata", {}),
-            "crawled_at": datetime.now(timezone.utc).isoformat(),
+            "crawled_at": datetime.now(UTC).isoformat(),
             "status_code": http_metadata.get("status_code"),
             "content_type": http_metadata.get("content_type"),
         }
@@ -217,7 +233,7 @@ class AsyncCrawler:
             self.saved_pages += 1
 
         except Exception as exc:
-            logging.exception("Failed to save page: %s", url)
+            logger.exception("Failed to save page: %s", url)
             self.storage_errors.append({
                 "url": url,
                 "error": str(exc),
@@ -251,12 +267,10 @@ class AsyncCrawler:
         ):
             return False
 
-        if exclude_patterns and any(
-            re.search(pattern, url) for pattern in exclude_patterns
-        ):
-            return False
-
-        return True
+        return not (
+            exclude_patterns
+            and any(re.search(pattern, url) for pattern in exclude_patterns)
+        )
 
 
     async def crawl(
@@ -267,9 +281,12 @@ class AsyncCrawler:
         same_domain_only: bool = True,
         include_patterns: list[str] | None = None,
         exclude_patterns: list[str] | None = None,
+        sitemap_urls: list[str] | None = None,
     ) -> dict[str, dict]:
+        self._reset_crawl_state()
         queue = CrawlerQueue()
-        started_at = time.monotonic()
+        monitor = CrawlerMonitor(total=max_pages)
+        self.monitor = monitor
         start_domains = {}
         results = {}
 
@@ -278,8 +295,52 @@ class AsyncCrawler:
                 queue.add_url(url)
                 start_domains[url] = urlparse(url).netloc
 
+        # Добавляем URL из sitemap в очередь обхода.
+        if sitemap_urls:
+            sitemap_parser = SitemapParser(self.session)
+
+            for sitemap_url in sitemap_urls:
+                try:
+                    discovered_urls = await sitemap_parser.fetch_sitemap(
+                        sitemap_url
+                    )
+
+                    start_domain = urlparse(sitemap_url).netloc
+
+                    added_count = 0
+
+                    for url in discovered_urls:
+                        if not self.should_crawl(
+                            url,
+                            start_domain=start_domain,
+                            same_domain_only=same_domain_only,
+                            include_patterns=include_patterns,
+                            exclude_patterns=exclude_patterns,
+                        ):
+                            continue
+
+                        if self.mark_visited(url, depth=0):
+                            start_domains[url] = start_domain
+                            queue.add_url(url)
+                            added_count += 1
+
+                    logger.info(
+                        "Sitemap %s: discovered %s URLs, added %s",
+                        sitemap_url,
+                        len(discovered_urls),
+                        added_count,
+                    )
+
+                except (aiohttp.ClientError, ValueError) as exc:
+                    logger.warning(
+                        "Could not process sitemap %s: %s",
+                        sitemap_url,
+                        exc,
+                    )
+
         async def process_url(url: str) -> None:
             depth = self.url_depths[url]
+            monitor.task_started()
 
             try:
                 page = await self.fetch_and_parse(url)
@@ -323,40 +384,63 @@ class AsyncCrawler:
                         queue.add_url(link)
 
             except Exception as exc:
-                logging.exception("Unexpected error crawling %s", url)
+                logger.exception("Unexpected error crawling %s", url)
                 self.failed_urls[url] = str(exc)
                 queue.mark_failed(url, str(exc))
 
+            finally:
+                monitor.task_finished()
+
+        async def monitor_progress() -> None:
+            while True:
+                await asyncio.sleep(2)
+
+                logger.info(
+                    "Crawl monitoring: %s",
+                    monitor.get_progress(),
+                )
+
+        monitor_task = asyncio.create_task(monitor_progress())
+
         scheduled = 0
 
-        while scheduled < max_pages:
-            batch = []
+        try:
+            while scheduled < max_pages:
+                batch = []
 
-            while (
-                len(batch) < getattr(self, "max_concurrent", 5)
-                and scheduled + len(batch) < max_pages
-            ):
-                url = await queue.get_next()
+                while (
+                    len(batch) < getattr(self, "max_concurrent", 5)
+                    and scheduled + len(batch) < max_pages
+                ):
+                    url = await queue.get_next()
 
-                if url is None:
+                    if url is None:
+                        break
+
+                    batch.append(url)
+
+                if not batch:
                     break
 
-                batch.append(url)
+                scheduled += len(batch)
 
-            if not batch:
-                break
+                await asyncio.gather(
+                    *(process_url(url) for url in batch)
+                )
 
-            scheduled += len(batch)
+        finally:
+            monitor_task.cancel()
 
-            await asyncio.gather(
-                *(process_url(url) for url in batch)
-            )
+            try:
+                await monitor_task
+            except asyncio.CancelledError:
+                pass
 
-            logging.info(
-                "Crawl progress: %s",
-                self.get_progress(started_at, queue),
-            )
+        stats = getattr(self, "stats", None)
 
+        if stats is not None:
+            stats.finish()
+        
         return results
 
 
@@ -376,6 +460,15 @@ class AsyncCrawler:
             "pages_per_second": round(processed / elapsed, 2),
         }
 
+    def get_stats(self) -> dict:
+        """Возвращает общую статистику crawler."""
+        return self.stats.to_dict()
+
+    def get_monitoring(self) -> dict:
+        if not hasattr(self, "monitor"):
+            return {}
+
+        return self.monitor.get_progress()
 
     def get_rate_stats(self) -> dict:
         now = time.monotonic()
@@ -418,7 +511,7 @@ class AsyncCrawler:
                 if not self.robots_parser.can_fetch(
                     url, self.user_agent
                 ):
-                    logging.warning("Blocked by robots.txt: %s", url)
+                    logger.warning("Blocked by robots.txt: %s", url)
                     self.blocked_urls.add(url)
                     return ""
 
@@ -441,7 +534,7 @@ class AsyncCrawler:
                 sock_read=getattr(self, "read_timeout", 10.0) * timeout_multiplier,
             )
 
-            logging.info(
+            logger.info(
                 "Fetching %s (attempt %s, timeout multiplier x%s)",
                 url,
                 _retry_attempt + 1,
@@ -464,7 +557,7 @@ class AsyncCrawler:
                         "content_type": response.headers.get("Content-Type"),
                     }
 
-                    logging.info("Fetched %s", url)
+                    logger.info("Fetched %s", url)
                     return content
 
             except aiohttp.ClientResponseError as exc:
@@ -477,7 +570,7 @@ class AsyncCrawler:
                     f"Permanent HTTP error {exc.status}: {url}"
                 ) from exc
 
-            except asyncio.TimeoutError as exc:
+            except TimeoutError as exc:
                 raise TransientError(
                     f"Request timed out: {url}"
                 ) from exc
@@ -506,3 +599,24 @@ class AsyncCrawler:
             "blocked_urls": sorted(self.blocked_urls),
             "retry_stats": retry_stats,
         }
+
+    def _reset_crawl_state(self) -> None:
+        """Сбрасывает состояние перед новым обходом."""
+        self.blocked_urls = set()
+        self.request_timestamps = []
+        self.request_delays = []
+        self._last_request_time = {}
+        self._delay_locks = {}
+
+        self.visited_urls = set()
+        self.failed_urls = {}
+        self.processed_urls = {}
+        self.url_depths = {}
+
+        self.response_metadata = {}
+        self.stats = CrawlerStats()
+        self.saved_pages = 0
+        self.storage_errors = []
+
+        if hasattr(self, "monitor"):
+            del self.monitor

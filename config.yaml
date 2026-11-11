@@ -1,0 +1,35 @@
+
+max_concurrent: 3
+max_per_domain: 3
+requests_per_second: 1.0
+
+respect_robots: true
+min_delay: 0.5
+jitter: 0.0
+
+max_retries: 3
+connect_timeout: 10.0
+read_timeout: 10.0
+total_timeout: 20.0
+backoff_base: 1.0
+
+user_agent: "MyBot/1.0"
+
+start_urls:
+  - "https://books.toscrape.com/"
+
+sitemap_urls: []
+
+max_pages: 100
+max_depth: 2
+same_domain_only: true
+
+include_patterns: []
+
+exclude_patterns:
+  - '\.pdf$'
+
+storage:
+  type: sqlite
+  filepath: crawler.db
+  batch_size: 10

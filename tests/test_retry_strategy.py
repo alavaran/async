@@ -1,11 +1,13 @@
-import unittest
+
 import json
 import os
 import tempfile
-
+import unittest
 from unittest.mock import AsyncMock, patch
+
+from src.exceptions import NetworkError, PermanentError, TransientError
 from src.retry_strategy import RetryStrategy
-from src.exceptions import TransientError, PermanentError, NetworkError
+
 
 class TestRetryStrategy(unittest.IsolatedAsyncioTestCase):
     async def test_retries_then_succeeds(self):
@@ -24,20 +26,6 @@ class TestRetryStrategy(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(result, "success")
         self.assertEqual(calls, 3)
         self.assertEqual(strategy.successful_retries, 1)
-
-    async def test_permanent_error_is_not_retried(self):
-        strategy = RetryStrategy(max_retries=3, backoff_factor=0)
-        calls = 0
-
-        async def request():
-            nonlocal calls
-            calls += 1
-            raise PermanentError("Not found")
-
-        with self.assertRaises(PermanentError):
-            await strategy.execute_with_retry(request)
-
-        self.assertEqual(calls, 1)
 
     async def test_exponential_backoff(self):
         strategy = RetryStrategy(
@@ -87,7 +75,6 @@ class TestRetryStrategy(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(operation.await_count, 2)
         self.assertEqual(strategy.successful_retries, 1)
 
-
     async def test_transient_error_is_retried(self):
         strategy = RetryStrategy(
             max_retries=2,
@@ -105,7 +92,6 @@ class TestRetryStrategy(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(result, "success")
         self.assertEqual(operation.await_count, 2)
 
-
     async def test_permanent_error_is_not_retried(self):
         strategy = RetryStrategy(
             max_retries=3,
@@ -120,7 +106,6 @@ class TestRetryStrategy(unittest.IsolatedAsyncioTestCase):
 
         self.assertEqual(operation.await_count, 1)
         self.assertEqual(strategy.successful_retries, 0)
-
 
     async def test_error_statistics(self):
         strategy = RetryStrategy(
@@ -167,7 +152,6 @@ class TestRetryStrategy(unittest.IsolatedAsyncioTestCase):
             "https://example.com/missing",
         )
 
-    
 
 if __name__ == "__main__":
     unittest.main()

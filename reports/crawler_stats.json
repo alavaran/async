@@ -1,0 +1,19 @@
+{
+    "pages_processed": 10,
+    "successful_pages": 10,
+    "failed_pages": 0,
+    "total_pages": 10,
+    "successful": 10,
+    "failed": 0,
+    "runtime_seconds": 10.78,
+    "pages_per_second": 0.93,
+    "status_distribution": {
+        "200": 10
+    },
+    "top_domains": [
+        {
+            "domain": "books.toscrape.com",
+            "pages": 10
+        }
+    ]
+}

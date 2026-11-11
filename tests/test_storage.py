@@ -2,8 +2,9 @@
 import json
 import tempfile
 import unittest
+from datetime import UTC
 from pathlib import Path
-from unittest.mock import AsyncMock, patch
+from unittest.mock import patch
 
 from src.storage import JSONStorage
 
@@ -56,10 +57,10 @@ class TestJSONStorage(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(json.loads(content), record)
 
     async def test_datetime_is_serialized(self):
-        from datetime import datetime, timezone
+        from datetime import datetime
 
         record = {
-            "crawled_at": datetime(2026, 1, 1, tzinfo=timezone.utc)
+            "crawled_at": datetime(2026, 1, 1, tzinfo=UTC)
         }
 
         await self.storage.save(record)

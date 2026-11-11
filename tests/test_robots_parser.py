@@ -2,8 +2,6 @@
 import unittest
 from unittest.mock import AsyncMock, MagicMock
 
-import aiohttp
-
 from src.robots_parser import RobotsParser
 
 

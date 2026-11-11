@@ -1,11 +1,10 @@
 
 import asyncio
 import logging
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urlparse
 from urllib.robotparser import RobotFileParser
 
 import aiohttp
-
 
 logger = logging.getLogger(__name__)
 
@@ -66,7 +65,7 @@ class RobotsParser:
                         )
                         parser.parse(["User-agent: *", "Disallow: /"])
 
-            except (aiohttp.ClientError, asyncio.TimeoutError) as exc:
+            except (TimeoutError, aiohttp.ClientError) as exc:
                 logger.warning("Could not fetch %s: %s", robots_url, exc)
                 # Fail closed on network errors.
                 parser.parse(["User-agent: *", "Disallow: /"])

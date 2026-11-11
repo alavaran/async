@@ -1,0 +1,1079 @@
+2026-11-10 21:45:49 | INFO | src.robots_parser | robots.txt unavailable (HTTP 404): https://books.toscrape.com/robots.txt
+2026-11-10 21:45:49 | INFO | root | Fetching https://books.toscrape.com/ (attempt 1, timeout multiplier x1)
+2026-11-10 21:45:50 | INFO | root | Fetched https://books.toscrape.com/
+2026-11-10 21:45:50 | INFO | root | Crawl progress: {'pages_processed': 1, 'queue_size': 73, 'errors': 0, 'pages_per_second': 0.33}
+2026-11-10 21:45:50 | INFO | root | Fetching https://books.toscrape.com/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:45:51 | INFO | root | Fetched https://books.toscrape.com/index.html
+2026-11-10 21:45:51 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books_1/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:45:52 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books_1/index.html
+2026-11-10 21:45:52 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/travel_2/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:45:53 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+2026-11-10 21:45:53 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/mystery_3/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:45:54 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+2026-11-10 21:45:54 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:45:55 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+2026-11-10 21:45:55 | INFO | root | Crawl progress: {'pages_processed': 6, 'queue_size': 119, 'errors': 0, 'pages_per_second': 0.8}
+2026-11-10 21:45:55 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:45:56 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html
+2026-11-10 21:45:56 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/classics_6/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:45:57 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/classics_6/index.html
+2026-11-10 21:45:57 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:45:58 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+2026-11-10 21:45:59 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/romance_8/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:45:59 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/romance_8/index.html
+2026-11-10 21:46:00 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:00 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html
+2026-11-10 21:46:00 | INFO | root | Crawl progress: {'pages_processed': 11, 'queue_size': 202, 'errors': 0, 'pages_per_second': 0.88}
+2026-11-10 21:46:01 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/fiction_10/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:01 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/fiction_10/index.html
+2026-11-10 21:46:02 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/childrens_11/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:02 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/childrens_11/index.html
+2026-11-10 21:46:03 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/religion_12/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:03 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/religion_12/index.html
+2026-11-10 21:46:04 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:04 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html
+2026-11-10 21:46:05 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/music_14/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:05 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/music_14/index.html
+2026-11-10 21:46:05 | INFO | root | Crawl progress: {'pages_processed': 16, 'queue_size': 277, 'errors': 0, 'pages_per_second': 0.91}
+2026-11-10 21:46:06 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/default_15/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:06 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/default_15/index.html
+2026-11-10 21:46:07 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:07 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html
+2026-11-10 21:46:08 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:08 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html
+2026-11-10 21:46:09 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:09 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html
+2026-11-10 21:46:10 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/fantasy_19/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:10 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/fantasy_19/index.html
+2026-11-10 21:46:10 | INFO | root | Crawl progress: {'pages_processed': 21, 'queue_size': 352, 'errors': 0, 'pages_per_second': 0.93}
+2026-11-10 21:46:11 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/new-adult_20/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:11 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/new-adult_20/index.html
+2026-11-10 21:46:12 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/young-adult_21/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:12 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/young-adult_21/index.html
+2026-11-10 21:46:13 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/science_22/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:13 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/science_22/index.html
+2026-11-10 21:46:14 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/poetry_23/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:14 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/poetry_23/index.html
+2026-11-10 21:46:15 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/paranormal_24/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:15 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/paranormal_24/index.html
+2026-11-10 21:46:15 | INFO | root | Crawl progress: {'pages_processed': 26, 'queue_size': 402, 'errors': 0, 'pages_per_second': 0.94}
+2026-11-10 21:46:16 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/art_25/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:16 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/art_25/index.html
+2026-11-10 21:46:17 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/psychology_26/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:17 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/psychology_26/index.html
+2026-11-10 21:46:18 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/autobiography_27/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:19 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/autobiography_27/index.html
+2026-11-10 21:46:19 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/parenting_28/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:19 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/parenting_28/index.html
+2026-11-10 21:46:20 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:20 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html
+2026-11-10 21:46:20 | INFO | root | Crawl progress: {'pages_processed': 31, 'queue_size': 423, 'errors': 0, 'pages_per_second': 0.94}
+2026-11-10 21:46:21 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/humor_30/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:21 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/humor_30/index.html
+2026-11-10 21:46:22 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/horror_31/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:22 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/horror_31/index.html
+2026-11-10 21:46:23 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/history_32/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:23 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/history_32/index.html
+2026-11-10 21:46:24 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:24 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html
+2026-11-10 21:46:25 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:25 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html
+2026-11-10 21:46:25 | INFO | root | Crawl progress: {'pages_processed': 36, 'queue_size': 489, 'errors': 0, 'pages_per_second': 0.95}
+2026-11-10 21:46:26 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/business_35/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:26 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/business_35/index.html
+2026-11-10 21:46:27 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/biography_36/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:27 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/biography_36/index.html
+2026-11-10 21:46:28 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/thriller_37/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:29 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/contemporary_38/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:29 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/thriller_37/index.html
+2026-11-10 21:46:30 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/spirituality_39/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:30 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/spirituality_39/index.html
+2026-11-10 21:46:39 | WARNING | src.retry_strategy | Attempt 1 failed (TransientError). Retrying in 1.00 seconds
+2026-11-10 21:46:40 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/contemporary_38/index.html (attempt 2, timeout multiplier x2)
+2026-11-10 21:46:40 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/contemporary_38/index.html
+2026-11-10 21:46:40 | INFO | src.retry_strategy | Retry succeeded on attempt 2
+2026-11-10 21:46:40 | INFO | root | Crawl progress: {'pages_processed': 41, 'queue_size': 520, 'errors': 0, 'pages_per_second': 0.77}
+2026-11-10 21:46:41 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/academic_40/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:41 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/academic_40/index.html
+2026-11-10 21:46:42 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/self-help_41/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:42 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/self-help_41/index.html
+2026-11-10 21:46:43 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical_42/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:43 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical_42/index.html
+2026-11-10 21:46:44 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/christian_43/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:44 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/christian_43/index.html
+2026-11-10 21:46:45 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/suspense_44/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:45 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/suspense_44/index.html
+2026-11-10 21:46:45 | INFO | root | Crawl progress: {'pages_processed': 46, 'queue_size': 527, 'errors': 0, 'pages_per_second': 0.79}
+2026-11-10 21:46:46 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/short-stories_45/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:46 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/short-stories_45/index.html
+2026-11-10 21:46:47 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/novels_46/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:47 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/novels_46/index.html
+2026-11-10 21:46:48 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/health_47/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:48 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/health_47/index.html
+2026-11-10 21:46:49 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/politics_48/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:46:49 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/politics_48/index.html
+2026-11-10 21:46:49 | INFO | root | Crawl progress: {'pages_processed': 50, 'queue_size': 531, 'errors': 0, 'pages_per_second': 0.81}
+2026-11-10 21:50:16 | INFO | src.robots_parser | robots.txt unavailable (HTTP 404): https://books.toscrape.com/robots.txt
+2026-11-10 21:50:16 | INFO | root | Fetching https://books.toscrape.com/ (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:16 | INFO | root | Fetched https://books.toscrape.com/
+2026-11-10 21:50:16 | INFO | root | Crawl progress: {'pages_processed': 1, 'queue_size': 73, 'errors': 0, 'pages_per_second': 0.48}
+2026-11-10 21:50:17 | INFO | root | Fetching https://books.toscrape.com/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:17 | INFO | root | Fetched https://books.toscrape.com/index.html
+2026-11-10 21:50:18 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books_1/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:18 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books_1/index.html
+2026-11-10 21:50:19 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/travel_2/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:19 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+2026-11-10 21:50:20 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/mystery_3/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:20 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+2026-11-10 21:50:21 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:21 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+2026-11-10 21:50:21 | INFO | root | Crawl progress: {'pages_processed': 6, 'queue_size': 119, 'errors': 0, 'pages_per_second': 0.85}
+2026-11-10 21:50:22 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:22 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html
+2026-11-10 21:50:23 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/classics_6/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:23 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/classics_6/index.html
+2026-11-10 21:50:24 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:24 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+2026-11-10 21:50:25 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/romance_8/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:25 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/romance_8/index.html
+2026-11-10 21:50:26 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:26 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html
+2026-11-10 21:50:26 | INFO | root | Crawl progress: {'pages_processed': 11, 'queue_size': 202, 'errors': 0, 'pages_per_second': 0.91}
+2026-11-10 21:50:27 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/fiction_10/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:27 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/fiction_10/index.html
+2026-11-10 21:50:28 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/childrens_11/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:28 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/childrens_11/index.html
+2026-11-10 21:50:29 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/religion_12/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:29 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/religion_12/index.html
+2026-11-10 21:50:30 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:30 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html
+2026-11-10 21:50:31 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/music_14/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:31 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/music_14/index.html
+2026-11-10 21:50:31 | INFO | root | Crawl progress: {'pages_processed': 16, 'queue_size': 277, 'errors': 0, 'pages_per_second': 0.93}
+2026-11-10 21:50:32 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/default_15/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:32 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/default_15/index.html
+2026-11-10 21:50:33 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:33 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html
+2026-11-10 21:50:34 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:34 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html
+2026-11-10 21:50:35 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:35 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html
+2026-11-10 21:50:36 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/fantasy_19/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:36 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/fantasy_19/index.html
+2026-11-10 21:50:36 | INFO | root | Crawl progress: {'pages_processed': 21, 'queue_size': 352, 'errors': 0, 'pages_per_second': 0.94}
+2026-11-10 21:50:37 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/new-adult_20/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:37 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/new-adult_20/index.html
+2026-11-10 21:50:38 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/young-adult_21/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:38 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/young-adult_21/index.html
+2026-11-10 21:50:39 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/science_22/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:39 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/science_22/index.html
+2026-11-10 21:50:40 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/poetry_23/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:40 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/poetry_23/index.html
+2026-11-10 21:50:41 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/paranormal_24/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:41 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/paranormal_24/index.html
+2026-11-10 21:50:41 | INFO | root | Crawl progress: {'pages_processed': 26, 'queue_size': 402, 'errors': 0, 'pages_per_second': 0.96}
+2026-11-10 21:50:42 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/art_25/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:42 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/art_25/index.html
+2026-11-10 21:50:43 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/psychology_26/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:43 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/psychology_26/index.html
+2026-11-10 21:50:44 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/autobiography_27/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:44 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/autobiography_27/index.html
+2026-11-10 21:50:45 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/parenting_28/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:45 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/parenting_28/index.html
+2026-11-10 21:50:46 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:46 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html
+2026-11-10 21:50:46 | INFO | root | Crawl progress: {'pages_processed': 31, 'queue_size': 423, 'errors': 0, 'pages_per_second': 0.96}
+2026-11-10 21:50:47 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/humor_30/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:47 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/humor_30/index.html
+2026-11-10 21:50:48 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/horror_31/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:48 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/horror_31/index.html
+2026-11-10 21:50:49 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/history_32/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:49 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/history_32/index.html
+2026-11-10 21:50:50 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:50 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html
+2026-11-10 21:50:51 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:51 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html
+2026-11-10 21:50:51 | INFO | root | Crawl progress: {'pages_processed': 36, 'queue_size': 489, 'errors': 0, 'pages_per_second': 0.97}
+2026-11-10 21:50:52 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/business_35/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:53 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/business_35/index.html
+2026-11-10 21:50:53 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/biography_36/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:53 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/biography_36/index.html
+2026-11-10 21:50:54 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/thriller_37/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:54 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/thriller_37/index.html
+2026-11-10 21:50:55 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/contemporary_38/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:55 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/contemporary_38/index.html
+2026-11-10 21:50:56 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/spirituality_39/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:56 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/spirituality_39/index.html
+2026-11-10 21:50:56 | INFO | root | Crawl progress: {'pages_processed': 41, 'queue_size': 520, 'errors': 0, 'pages_per_second': 0.97}
+2026-11-10 21:50:57 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/academic_40/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:57 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/academic_40/index.html
+2026-11-10 21:50:58 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/self-help_41/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:58 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/self-help_41/index.html
+2026-11-10 21:50:59 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical_42/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:50:59 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical_42/index.html
+2026-11-10 21:51:00 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/christian_43/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:51:00 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/christian_43/index.html
+2026-11-10 21:51:01 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/suspense_44/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:51:01 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/suspense_44/index.html
+2026-11-10 21:51:01 | INFO | root | Crawl progress: {'pages_processed': 46, 'queue_size': 527, 'errors': 0, 'pages_per_second': 0.97}
+2026-11-10 21:51:02 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/short-stories_45/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:51:02 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/short-stories_45/index.html
+2026-11-10 21:51:03 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/novels_46/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:51:03 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/novels_46/index.html
+2026-11-10 21:51:04 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/health_47/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:51:04 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/health_47/index.html
+2026-11-10 21:51:05 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/politics_48/index.html (attempt 1, timeout multiplier x1)
+2026-11-10 21:51:05 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/politics_48/index.html
+2026-11-10 21:51:05 | INFO | root | Crawl progress: {'pages_processed': 50, 'queue_size': 531, 'errors': 0, 'pages_per_second': 0.97}
+2026-11-11 11:36:22 | INFO | src.robots_parser | robots.txt unavailable (HTTP 404): https://books.toscrape.com/robots.txt
+2026-11-11 11:36:22 | INFO | root | Fetching https://books.toscrape.com/ (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:23 | INFO | root | Fetched https://books.toscrape.com/
+2026-11-11 11:36:23 | INFO | root | Crawl monitoring: {'completed': 1, 'total': 100, 'progress_percent': 1.0, 'elapsed_seconds': 2.0, 'pages_per_second': 0.5, 'eta_seconds': 198.44, 'active_tasks': 0}
+2026-11-11 11:36:23 | INFO | root | Fetching https://books.toscrape.com/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:24 | INFO | root | Fetched https://books.toscrape.com/index.html
+2026-11-11 11:36:24 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books_1/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:25 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books_1/index.html
+2026-11-11 11:36:25 | INFO | root | Crawl monitoring: {'completed': 3, 'total': 100, 'progress_percent': 3.0, 'elapsed_seconds': 4.01, 'pages_per_second': 0.75, 'eta_seconds': 129.57, 'active_tasks': 1}
+2026-11-11 11:36:25 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/travel_2/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:26 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+2026-11-11 11:36:26 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/mystery_3/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:27 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+2026-11-11 11:36:27 | INFO | root | Crawl monitoring: {'completed': 5, 'total': 100, 'progress_percent': 5.0, 'elapsed_seconds': 6.01, 'pages_per_second': 0.83, 'eta_seconds': 114.22, 'active_tasks': 2}
+2026-11-11 11:36:27 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:28 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+2026-11-11 11:36:28 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:29 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html
+2026-11-11 11:36:29 | INFO | root | Crawl monitoring: {'completed': 7, 'total': 100, 'progress_percent': 7.0, 'elapsed_seconds': 8.03, 'pages_per_second': 0.87, 'eta_seconds': 106.65, 'active_tasks': 3}
+2026-11-11 11:36:29 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/classics_6/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:30 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/classics_6/index.html
+2026-11-11 11:36:30 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:31 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+2026-11-11 11:36:31 | INFO | root | Crawl monitoring: {'completed': 9, 'total': 100, 'progress_percent': 9.0, 'elapsed_seconds': 10.03, 'pages_per_second': 0.9, 'eta_seconds': 101.42, 'active_tasks': 1}
+2026-11-11 11:36:31 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/romance_8/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:32 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/romance_8/index.html
+2026-11-11 11:36:32 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:33 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html
+2026-11-11 11:36:33 | INFO | root | Crawl monitoring: {'completed': 11, 'total': 100, 'progress_percent': 11.0, 'elapsed_seconds': 12.05, 'pages_per_second': 0.91, 'eta_seconds': 97.47, 'active_tasks': 2}
+2026-11-11 11:36:33 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/fiction_10/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:34 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/fiction_10/index.html
+2026-11-11 11:36:34 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/childrens_11/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:35 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/childrens_11/index.html
+2026-11-11 11:36:35 | INFO | root | Crawl monitoring: {'completed': 13, 'total': 100, 'progress_percent': 13.0, 'elapsed_seconds': 14.05, 'pages_per_second': 0.93, 'eta_seconds': 94.04, 'active_tasks': 3}
+2026-11-11 11:36:35 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/religion_12/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:36 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/religion_12/index.html
+2026-11-11 11:36:36 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:37 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html
+2026-11-11 11:36:37 | INFO | root | Crawl monitoring: {'completed': 15, 'total': 100, 'progress_percent': 15.0, 'elapsed_seconds': 16.07, 'pages_per_second': 0.93, 'eta_seconds': 91.05, 'active_tasks': 1}
+2026-11-11 11:36:37 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/music_14/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:38 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/music_14/index.html
+2026-11-11 11:36:38 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/default_15/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:39 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/default_15/index.html
+2026-11-11 11:36:39 | INFO | root | Crawl monitoring: {'completed': 17, 'total': 100, 'progress_percent': 17.0, 'elapsed_seconds': 18.07, 'pages_per_second': 0.94, 'eta_seconds': 88.22, 'active_tasks': 2}
+2026-11-11 11:36:39 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:40 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html
+2026-11-11 11:36:40 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:41 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html
+2026-11-11 11:36:41 | INFO | root | Crawl monitoring: {'completed': 19, 'total': 100, 'progress_percent': 19.0, 'elapsed_seconds': 20.08, 'pages_per_second': 0.95, 'eta_seconds': 85.6, 'active_tasks': 3}
+2026-11-11 11:36:41 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:42 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html
+2026-11-11 11:36:42 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/fantasy_19/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:43 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/fantasy_19/index.html
+2026-11-11 11:36:43 | INFO | root | Crawl monitoring: {'completed': 21, 'total': 100, 'progress_percent': 21.0, 'elapsed_seconds': 22.09, 'pages_per_second': 0.95, 'eta_seconds': 83.1, 'active_tasks': 1}
+2026-11-11 11:36:43 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/new-adult_20/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:44 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/new-adult_20/index.html
+2026-11-11 11:36:44 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/young-adult_21/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:45 | INFO | root | Crawl monitoring: {'completed': 22, 'total': 100, 'progress_percent': 22.0, 'elapsed_seconds': 24.1, 'pages_per_second': 0.91, 'eta_seconds': 85.45, 'active_tasks': 3}
+2026-11-11 11:36:45 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/young-adult_21/index.html
+2026-11-11 11:36:45 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/science_22/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:46 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/science_22/index.html
+2026-11-11 11:36:46 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/poetry_23/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:47 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/poetry_23/index.html
+2026-11-11 11:36:47 | INFO | root | Crawl monitoring: {'completed': 25, 'total': 100, 'progress_percent': 25.0, 'elapsed_seconds': 26.11, 'pages_per_second': 0.96, 'eta_seconds': 78.34, 'active_tasks': 0}
+2026-11-11 11:36:47 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/paranormal_24/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:48 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/paranormal_24/index.html
+2026-11-11 11:36:48 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/art_25/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:49 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/art_25/index.html
+2026-11-11 11:36:49 | INFO | root | Crawl monitoring: {'completed': 27, 'total': 100, 'progress_percent': 27.0, 'elapsed_seconds': 28.12, 'pages_per_second': 0.96, 'eta_seconds': 76.02, 'active_tasks': 1}
+2026-11-11 11:36:49 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/psychology_26/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:50 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/psychology_26/index.html
+2026-11-11 11:36:50 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/autobiography_27/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:51 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/autobiography_27/index.html
+2026-11-11 11:36:51 | INFO | root | Crawl monitoring: {'completed': 29, 'total': 100, 'progress_percent': 29.0, 'elapsed_seconds': 30.12, 'pages_per_second': 0.96, 'eta_seconds': 73.75, 'active_tasks': 2}
+2026-11-11 11:36:51 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/parenting_28/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:52 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/parenting_28/index.html
+2026-11-11 11:36:52 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:53 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html
+2026-11-11 11:36:53 | INFO | root | Crawl monitoring: {'completed': 31, 'total': 100, 'progress_percent': 31.0, 'elapsed_seconds': 32.13, 'pages_per_second': 0.96, 'eta_seconds': 71.53, 'active_tasks': 3}
+2026-11-11 11:36:53 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/humor_30/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:54 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/humor_30/index.html
+2026-11-11 11:36:55 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/horror_31/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:55 | INFO | root | Crawl monitoring: {'completed': 32, 'total': 100, 'progress_percent': 32.0, 'elapsed_seconds': 34.15, 'pages_per_second': 0.94, 'eta_seconds': 72.57, 'active_tasks': 2}
+2026-11-11 11:36:55 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/horror_31/index.html
+2026-11-11 11:36:56 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/history_32/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:56 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/history_32/index.html
+2026-11-11 11:36:57 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:57 | INFO | root | Crawl monitoring: {'completed': 34, 'total': 100, 'progress_percent': 34.0, 'elapsed_seconds': 36.16, 'pages_per_second': 0.94, 'eta_seconds': 70.2, 'active_tasks': 3}
+2026-11-11 11:36:57 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html
+2026-11-11 11:36:58 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:58 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html
+2026-11-11 11:36:59 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/business_35/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:36:59 | INFO | root | Crawl monitoring: {'completed': 36, 'total': 100, 'progress_percent': 36.0, 'elapsed_seconds': 38.18, 'pages_per_second': 0.94, 'eta_seconds': 67.87, 'active_tasks': 1}
+2026-11-11 11:36:59 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/business_35/index.html
+2026-11-11 11:37:00 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/biography_36/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:00 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/biography_36/index.html
+2026-11-11 11:37:01 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/thriller_37/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:01 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/thriller_37/index.html
+2026-11-11 11:37:01 | INFO | root | Crawl monitoring: {'completed': 39, 'total': 100, 'progress_percent': 39.0, 'elapsed_seconds': 40.19, 'pages_per_second': 0.97, 'eta_seconds': 62.86, 'active_tasks': 1}
+2026-11-11 11:37:02 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/contemporary_38/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:02 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/contemporary_38/index.html
+2026-11-11 11:37:03 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/spirituality_39/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:03 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/spirituality_39/index.html
+2026-11-11 11:37:03 | INFO | root | Crawl monitoring: {'completed': 41, 'total': 100, 'progress_percent': 41.0, 'elapsed_seconds': 42.19, 'pages_per_second': 0.97, 'eta_seconds': 60.72, 'active_tasks': 2}
+2026-11-11 11:37:04 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/academic_40/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:04 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/academic_40/index.html
+2026-11-11 11:37:05 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/self-help_41/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:05 | INFO | root | Crawl monitoring: {'completed': 42, 'total': 100, 'progress_percent': 42.0, 'elapsed_seconds': 44.21, 'pages_per_second': 0.95, 'eta_seconds': 61.05, 'active_tasks': 1}
+2026-11-11 11:37:05 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/self-help_41/index.html
+2026-11-11 11:37:06 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical_42/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:06 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical_42/index.html
+2026-11-11 11:37:07 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/christian_43/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:07 | INFO | root | Crawl monitoring: {'completed': 44, 'total': 100, 'progress_percent': 44.0, 'elapsed_seconds': 46.22, 'pages_per_second': 0.95, 'eta_seconds': 58.82, 'active_tasks': 2}
+2026-11-11 11:37:07 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/christian_43/index.html
+2026-11-11 11:37:08 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/suspense_44/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:08 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/suspense_44/index.html
+2026-11-11 11:37:09 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/short-stories_45/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:09 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/short-stories_45/index.html
+2026-11-11 11:37:09 | INFO | root | Crawl monitoring: {'completed': 47, 'total': 100, 'progress_percent': 47.0, 'elapsed_seconds': 48.22, 'pages_per_second': 0.97, 'eta_seconds': 54.38, 'active_tasks': 2}
+2026-11-11 11:37:10 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/novels_46/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:10 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/novels_46/index.html
+2026-11-11 11:37:11 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/health_47/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:11 | INFO | root | Crawl monitoring: {'completed': 48, 'total': 100, 'progress_percent': 48.0, 'elapsed_seconds': 50.22, 'pages_per_second': 0.96, 'eta_seconds': 54.41, 'active_tasks': 1}
+2026-11-11 11:37:11 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/health_47/index.html
+2026-11-11 11:37:12 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/politics_48/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:12 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/politics_48/index.html
+2026-11-11 11:37:13 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/cultural_49/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:13 | INFO | root | Crawl monitoring: {'completed': 50, 'total': 100, 'progress_percent': 50.0, 'elapsed_seconds': 52.23, 'pages_per_second': 0.96, 'eta_seconds': 52.23, 'active_tasks': 2}
+2026-11-11 11:37:14 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/erotica_50/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:15 | INFO | root | Crawl monitoring: {'completed': 50, 'total': 100, 'progress_percent': 50.0, 'elapsed_seconds': 54.24, 'pages_per_second': 0.92, 'eta_seconds': 54.24, 'active_tasks': 2}
+2026-11-11 11:37:17 | INFO | root | Crawl monitoring: {'completed': 50, 'total': 100, 'progress_percent': 50.0, 'elapsed_seconds': 56.25, 'pages_per_second': 0.89, 'eta_seconds': 56.25, 'active_tasks': 2}
+2026-11-11 11:37:19 | INFO | root | Crawl monitoring: {'completed': 50, 'total': 100, 'progress_percent': 50.0, 'elapsed_seconds': 58.25, 'pages_per_second': 0.86, 'eta_seconds': 58.25, 'active_tasks': 2}
+2026-11-11 11:37:21 | INFO | root | Crawl monitoring: {'completed': 50, 'total': 100, 'progress_percent': 50.0, 'elapsed_seconds': 60.26, 'pages_per_second': 0.83, 'eta_seconds': 60.26, 'active_tasks': 2}
+2026-11-11 11:37:22 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/erotica_50/index.html
+2026-11-11 11:37:23 | WARNING | src.retry_strategy | Attempt 1 failed (TransientError). Retrying in 1.00 seconds
+2026-11-11 11:37:23 | INFO | root | Crawl monitoring: {'completed': 51, 'total': 100, 'progress_percent': 51.0, 'elapsed_seconds': 62.27, 'pages_per_second': 0.82, 'eta_seconds': 59.83, 'active_tasks': 1}
+2026-11-11 11:37:24 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/cultural_49/index.html (attempt 2, timeout multiplier x2)
+2026-11-11 11:37:24 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/cultural_49/index.html
+2026-11-11 11:37:24 | INFO | src.retry_strategy | Retry succeeded on attempt 2
+2026-11-11 11:37:25 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/crime_51/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:25 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/crime_51/index.html
+2026-11-11 11:37:25 | INFO | root | Crawl monitoring: {'completed': 53, 'total': 100, 'progress_percent': 53.0, 'elapsed_seconds': 64.28, 'pages_per_second': 0.82, 'eta_seconds': 57.01, 'active_tasks': 2}
+2026-11-11 11:37:26 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:26 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html
+2026-11-11 11:37:27 | INFO | root | Fetching https://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:27 | INFO | root | Fetched https://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html
+2026-11-11 11:37:27 | INFO | root | Crawl monitoring: {'completed': 55, 'total': 100, 'progress_percent': 55.0, 'elapsed_seconds': 66.29, 'pages_per_second': 0.83, 'eta_seconds': 54.24, 'active_tasks': 3}
+2026-11-11 11:37:28 | INFO | root | Fetching https://books.toscrape.com/catalogue/soumission_998/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:28 | INFO | root | Fetched https://books.toscrape.com/catalogue/soumission_998/index.html
+2026-11-11 11:37:29 | INFO | root | Fetching https://books.toscrape.com/catalogue/sharp-objects_997/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:29 | INFO | root | Crawl monitoring: {'completed': 56, 'total': 100, 'progress_percent': 56.0, 'elapsed_seconds': 68.3, 'pages_per_second': 0.82, 'eta_seconds': 53.66, 'active_tasks': 2}
+2026-11-11 11:37:29 | INFO | root | Fetched https://books.toscrape.com/catalogue/sharp-objects_997/index.html
+2026-11-11 11:37:30 | INFO | root | Fetching https://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:30 | INFO | root | Fetched https://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html
+2026-11-11 11:37:31 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-requiem-red_995/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:31 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-requiem-red_995/index.html
+2026-11-11 11:37:31 | INFO | root | Crawl monitoring: {'completed': 59, 'total': 100, 'progress_percent': 59.0, 'elapsed_seconds': 70.3, 'pages_per_second': 0.84, 'eta_seconds': 48.86, 'active_tasks': 2}
+2026-11-11 11:37:32 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:32 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html
+2026-11-11 11:37:33 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:33 | INFO | root | Crawl monitoring: {'completed': 60, 'total': 100, 'progress_percent': 60.0, 'elapsed_seconds': 72.31, 'pages_per_second': 0.83, 'eta_seconds': 48.21, 'active_tasks': 1}
+2026-11-11 11:37:33 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html
+2026-11-11 11:37:34 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:34 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html
+2026-11-11 11:37:35 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-black-maria_991/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:35 | INFO | root | Crawl monitoring: {'completed': 62, 'total': 100, 'progress_percent': 62.0, 'elapsed_seconds': 74.32, 'pages_per_second': 0.83, 'eta_seconds': 45.55, 'active_tasks': 2}
+2026-11-11 11:37:35 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-black-maria_991/index.html
+2026-11-11 11:37:36 | INFO | root | Fetching https://books.toscrape.com/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:36 | INFO | root | Fetched https://books.toscrape.com/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html
+2026-11-11 11:37:37 | INFO | root | Fetching https://books.toscrape.com/catalogue/shakespeares-sonnets_989/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:37 | INFO | root | Crawl monitoring: {'completed': 64, 'total': 100, 'progress_percent': 64.0, 'elapsed_seconds': 76.32, 'pages_per_second': 0.84, 'eta_seconds': 42.93, 'active_tasks': 3}
+2026-11-11 11:37:37 | INFO | root | Fetched https://books.toscrape.com/catalogue/shakespeares-sonnets_989/index.html
+2026-11-11 11:37:38 | INFO | root | Fetching https://books.toscrape.com/catalogue/set-me-free_988/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:38 | INFO | root | Fetched https://books.toscrape.com/catalogue/set-me-free_988/index.html
+2026-11-11 11:37:39 | INFO | root | Fetching https://books.toscrape.com/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:39 | INFO | root | Crawl monitoring: {'completed': 66, 'total': 100, 'progress_percent': 66.0, 'elapsed_seconds': 78.32, 'pages_per_second': 0.84, 'eta_seconds': 40.35, 'active_tasks': 1}
+2026-11-11 11:37:39 | INFO | root | Fetched https://books.toscrape.com/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html
+2026-11-11 11:37:40 | INFO | root | Fetching https://books.toscrape.com/catalogue/rip-it-up-and-start-again_986/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:40 | INFO | root | Fetched https://books.toscrape.com/catalogue/rip-it-up-and-start-again_986/index.html
+2026-11-11 11:37:41 | INFO | root | Fetching https://books.toscrape.com/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:41 | INFO | root | Crawl monitoring: {'completed': 68, 'total': 100, 'progress_percent': 68.0, 'elapsed_seconds': 80.33, 'pages_per_second': 0.85, 'eta_seconds': 37.8, 'active_tasks': 2}
+2026-11-11 11:37:41 | INFO | root | Fetched https://books.toscrape.com/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html
+2026-11-11 11:37:42 | INFO | root | Fetching https://books.toscrape.com/catalogue/olio_984/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:42 | INFO | root | Fetched https://books.toscrape.com/catalogue/olio_984/index.html
+2026-11-11 11:37:43 | INFO | root | Fetching https://books.toscrape.com/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:43 | INFO | root | Crawl monitoring: {'completed': 70, 'total': 100, 'progress_percent': 70.0, 'elapsed_seconds': 82.33, 'pages_per_second': 0.85, 'eta_seconds': 35.28, 'active_tasks': 3}
+2026-11-11 11:37:43 | INFO | root | Fetched https://books.toscrape.com/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html
+2026-11-11 11:37:44 | INFO | root | Fetching https://books.toscrape.com/catalogue/libertarianism-for-beginners_982/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:44 | INFO | root | Fetched https://books.toscrape.com/catalogue/libertarianism-for-beginners_982/index.html
+2026-11-11 11:37:45 | INFO | root | Fetching https://books.toscrape.com/catalogue/its-only-the-himalayas_981/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:45 | INFO | root | Crawl monitoring: {'completed': 72, 'total': 100, 'progress_percent': 72.0, 'elapsed_seconds': 84.33, 'pages_per_second': 0.85, 'eta_seconds': 32.79, 'active_tasks': 1}
+2026-11-11 11:37:45 | INFO | root | Fetched https://books.toscrape.com/catalogue/its-only-the-himalayas_981/index.html
+2026-11-11 11:37:46 | INFO | root | Fetching https://books.toscrape.com/catalogue/page-2.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:46 | INFO | root | Fetched https://books.toscrape.com/catalogue/page-2.html
+2026-11-11 11:37:47 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books_1/page-2.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:47 | INFO | root | Crawl monitoring: {'completed': 74, 'total': 100, 'progress_percent': 74.0, 'elapsed_seconds': 86.34, 'pages_per_second': 0.86, 'eta_seconds': 30.34, 'active_tasks': 2}
+2026-11-11 11:37:47 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books_1/page-2.html
+2026-11-11 11:37:48 | INFO | root | Fetching https://books.toscrape.com/catalogue/full-moon-over-noahs-ark-an-odyssey-to-mount-ararat-and-beyond_811/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:48 | INFO | root | Fetched https://books.toscrape.com/catalogue/full-moon-over-noahs-ark-an-odyssey-to-mount-ararat-and-beyond_811/index.html
+2026-11-11 11:37:49 | INFO | root | Fetching https://books.toscrape.com/catalogue/see-america-a-celebration-of-our-national-parks-treasured-sites_732/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:49 | INFO | root | Crawl monitoring: {'completed': 76, 'total': 100, 'progress_percent': 76.0, 'elapsed_seconds': 88.35, 'pages_per_second': 0.86, 'eta_seconds': 27.9, 'active_tasks': 3}
+2026-11-11 11:37:49 | INFO | root | Fetched https://books.toscrape.com/catalogue/see-america-a-celebration-of-our-national-parks-treasured-sites_732/index.html
+2026-11-11 11:37:50 | INFO | root | Fetching https://books.toscrape.com/catalogue/vagabonding-an-uncommon-guide-to-the-art-of-long-term-world-travel_552/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:50 | INFO | root | Fetched https://books.toscrape.com/catalogue/vagabonding-an-uncommon-guide-to-the-art-of-long-term-world-travel_552/index.html
+2026-11-11 11:37:51 | INFO | root | Fetching https://books.toscrape.com/catalogue/under-the-tuscan-sun_504/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:51 | INFO | root | Crawl monitoring: {'completed': 78, 'total': 100, 'progress_percent': 78.0, 'elapsed_seconds': 90.36, 'pages_per_second': 0.86, 'eta_seconds': 25.49, 'active_tasks': 1}
+2026-11-11 11:37:51 | INFO | root | Fetched https://books.toscrape.com/catalogue/under-the-tuscan-sun_504/index.html
+2026-11-11 11:37:52 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-summer-in-europe_458/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:52 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-summer-in-europe_458/index.html
+2026-11-11 11:37:53 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-great-railway-bazaar_446/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:53 | INFO | root | Crawl monitoring: {'completed': 80, 'total': 100, 'progress_percent': 80.0, 'elapsed_seconds': 92.38, 'pages_per_second': 0.87, 'eta_seconds': 23.09, 'active_tasks': 2}
+2026-11-11 11:37:53 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-great-railway-bazaar_446/index.html
+2026-11-11 11:37:54 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-year-in-provence-provence-1_421/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:54 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-year-in-provence-provence-1_421/index.html
+2026-11-11 11:37:55 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-road-to-little-dribbling-adventures-of-an-american-in-britain-notes-from-a-small-island-2_277/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:55 | INFO | root | Crawl monitoring: {'completed': 82, 'total': 100, 'progress_percent': 82.0, 'elapsed_seconds': 94.38, 'pages_per_second': 0.87, 'eta_seconds': 20.72, 'active_tasks': 3}
+2026-11-11 11:37:55 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-road-to-little-dribbling-adventures-of-an-american-in-britain-notes-from-a-small-island-2_277/index.html
+2026-11-11 11:37:56 | INFO | root | Fetching https://books.toscrape.com/catalogue/neither-here-nor-there-travels-in-europe_198/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:56 | INFO | root | Fetched https://books.toscrape.com/catalogue/neither-here-nor-there-travels-in-europe_198/index.html
+2026-11-11 11:37:57 | INFO | root | Fetching https://books.toscrape.com/catalogue/1000-places-to-see-before-you-die_1/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:57 | INFO | root | Crawl monitoring: {'completed': 84, 'total': 100, 'progress_percent': 84.0, 'elapsed_seconds': 96.39, 'pages_per_second': 0.87, 'eta_seconds': 18.36, 'active_tasks': 1}
+2026-11-11 11:37:57 | INFO | root | Fetched https://books.toscrape.com/catalogue/1000-places-to-see-before-you-die_1/index.html
+2026-11-11 11:37:58 | INFO | root | Fetching https://books.toscrape.com/catalogue/in-a-dark-dark-wood_963/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:59 | INFO | root | Fetched https://books.toscrape.com/catalogue/in-a-dark-dark-wood_963/index.html
+2026-11-11 11:37:59 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-past-never-ends_942/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:37:59 | INFO | root | Crawl monitoring: {'completed': 86, 'total': 100, 'progress_percent': 86.0, 'elapsed_seconds': 98.4, 'pages_per_second': 0.87, 'eta_seconds': 16.02, 'active_tasks': 2}
+2026-11-11 11:37:59 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-past-never-ends_942/index.html
+2026-11-11 11:38:00 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-murder-in-time_877/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:38:00 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-murder-in-time_877/index.html
+2026-11-11 11:38:01 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-murder-of-roger-ackroyd-hercule-poirot-4_852/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:38:01 | INFO | root | Crawl monitoring: {'completed': 88, 'total': 100, 'progress_percent': 88.0, 'elapsed_seconds': 100.41, 'pages_per_second': 0.88, 'eta_seconds': 13.69, 'active_tasks': 3}
+2026-11-11 11:38:01 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-murder-of-roger-ackroyd-hercule-poirot-4_852/index.html
+2026-11-11 11:38:02 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-last-mile-amos-decker-2_754/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:38:02 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-last-mile-amos-decker-2_754/index.html
+2026-11-11 11:38:03 | INFO | root | Fetching https://books.toscrape.com/catalogue/that-darkness-gardiner-and-renner-1_743/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:38:03 | INFO | root | Crawl monitoring: {'completed': 90, 'total': 100, 'progress_percent': 90.0, 'elapsed_seconds': 102.42, 'pages_per_second': 0.88, 'eta_seconds': 11.38, 'active_tasks': 1}
+2026-11-11 11:38:03 | INFO | root | Fetched https://books.toscrape.com/catalogue/that-darkness-gardiner-and-renner-1_743/index.html
+2026-11-11 11:38:04 | INFO | root | Fetching https://books.toscrape.com/catalogue/tastes-like-fear-di-marnie-rome-3_742/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:38:04 | INFO | root | Fetched https://books.toscrape.com/catalogue/tastes-like-fear-di-marnie-rome-3_742/index.html
+2026-11-11 11:38:05 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-time-of-torment-charlie-parker-14_657/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:38:05 | INFO | root | Crawl monitoring: {'completed': 92, 'total': 100, 'progress_percent': 92.0, 'elapsed_seconds': 104.43, 'pages_per_second': 0.88, 'eta_seconds': 9.08, 'active_tasks': 2}
+2026-11-11 11:38:05 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-time-of-torment-charlie-parker-14_657/index.html
+2026-11-11 11:38:06 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-study-in-scarlet-sherlock-holmes-1_656/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:38:06 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-study-in-scarlet-sherlock-holmes-1_656/index.html
+2026-11-11 11:38:07 | INFO | root | Fetching https://books.toscrape.com/catalogue/poisonous-max-revere-novels-3_627/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:38:07 | INFO | root | Crawl monitoring: {'completed': 94, 'total': 100, 'progress_percent': 94.0, 'elapsed_seconds': 106.45, 'pages_per_second': 0.88, 'eta_seconds': 6.79, 'active_tasks': 3}
+2026-11-11 11:38:08 | INFO | root | Fetched https://books.toscrape.com/catalogue/poisonous-max-revere-novels-3_627/index.html
+2026-11-11 11:38:08 | INFO | root | Fetching https://books.toscrape.com/catalogue/murder-at-the-42nd-street-library-raymond-ambler-1_624/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:38:08 | INFO | root | Fetched https://books.toscrape.com/catalogue/murder-at-the-42nd-street-library-raymond-ambler-1_624/index.html
+2026-11-11 11:38:09 | INFO | root | Fetching https://books.toscrape.com/catalogue/most-wanted_623/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:38:09 | INFO | root | Crawl monitoring: {'completed': 96, 'total': 100, 'progress_percent': 96.0, 'elapsed_seconds': 108.46, 'pages_per_second': 0.89, 'eta_seconds': 4.52, 'active_tasks': 1}
+2026-11-11 11:38:09 | INFO | root | Fetched https://books.toscrape.com/catalogue/most-wanted_623/index.html
+2026-11-11 11:38:10 | INFO | root | Fetching https://books.toscrape.com/catalogue/hide-away-eve-duncan-20_620/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:38:10 | INFO | root | Fetched https://books.toscrape.com/catalogue/hide-away-eve-duncan-20_620/index.html
+2026-11-11 11:38:11 | INFO | root | Fetching https://books.toscrape.com/catalogue/boar-island-anna-pigeon-19_613/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:38:11 | INFO | root | Crawl monitoring: {'completed': 98, 'total': 100, 'progress_percent': 98.0, 'elapsed_seconds': 110.47, 'pages_per_second': 0.89, 'eta_seconds': 2.25, 'active_tasks': 2}
+2026-11-11 11:38:11 | INFO | root | Fetched https://books.toscrape.com/catalogue/boar-island-anna-pigeon-19_613/index.html
+2026-11-11 11:38:12 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-widow_609/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:38:12 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-widow_609/index.html
+2026-11-11 11:49:11 | INFO | root | Crawl monitoring: {'completed': 0, 'total': 100, 'progress_percent': 0.0, 'elapsed_seconds': 2.01, 'pages_per_second': 0.0, 'eta_seconds': None, 'active_tasks': 1}
+2026-11-11 11:49:11 | INFO | src.robots_parser | robots.txt unavailable (HTTP 404): https://books.toscrape.com/robots.txt
+2026-11-11 11:49:11 | INFO | root | Fetching https://books.toscrape.com/ (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:12 | INFO | root | Fetched https://books.toscrape.com/
+2026-11-11 11:49:12 | INFO | root | Fetching https://books.toscrape.com/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:13 | INFO | root | Fetched https://books.toscrape.com/index.html
+2026-11-11 11:49:13 | INFO | root | Crawl monitoring: {'completed': 2, 'total': 100, 'progress_percent': 2.0, 'elapsed_seconds': 4.03, 'pages_per_second': 0.5, 'eta_seconds': 197.25, 'active_tasks': 2}
+2026-11-11 11:49:13 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books_1/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:14 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books_1/index.html
+2026-11-11 11:49:14 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/travel_2/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:15 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+2026-11-11 11:49:15 | INFO | root | Crawl monitoring: {'completed': 4, 'total': 100, 'progress_percent': 4.0, 'elapsed_seconds': 6.03, 'pages_per_second': 0.66, 'eta_seconds': 144.73, 'active_tasks': 3}
+2026-11-11 11:49:15 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/mystery_3/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:16 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+2026-11-11 11:49:16 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:17 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+2026-11-11 11:49:17 | INFO | root | Crawl monitoring: {'completed': 6, 'total': 100, 'progress_percent': 6.0, 'elapsed_seconds': 8.04, 'pages_per_second': 0.75, 'eta_seconds': 126.02, 'active_tasks': 1}
+2026-11-11 11:49:17 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:18 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html
+2026-11-11 11:49:18 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/classics_6/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:19 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/classics_6/index.html
+2026-11-11 11:49:19 | INFO | root | Crawl monitoring: {'completed': 8, 'total': 100, 'progress_percent': 8.0, 'elapsed_seconds': 10.05, 'pages_per_second': 0.8, 'eta_seconds': 115.6, 'active_tasks': 2}
+2026-11-11 11:49:19 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:20 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+2026-11-11 11:49:20 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/romance_8/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:21 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/romance_8/index.html
+2026-11-11 11:49:21 | INFO | root | Crawl monitoring: {'completed': 10, 'total': 100, 'progress_percent': 10.0, 'elapsed_seconds': 12.07, 'pages_per_second': 0.83, 'eta_seconds': 108.59, 'active_tasks': 3}
+2026-11-11 11:49:22 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:22 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html
+2026-11-11 11:49:23 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/fiction_10/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:23 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/fiction_10/index.html
+2026-11-11 11:49:23 | INFO | root | Crawl monitoring: {'completed': 12, 'total': 100, 'progress_percent': 12.0, 'elapsed_seconds': 14.07, 'pages_per_second': 0.85, 'eta_seconds': 103.19, 'active_tasks': 1}
+2026-11-11 11:49:24 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/childrens_11/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:24 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/childrens_11/index.html
+2026-11-11 11:49:25 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/religion_12/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:25 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/religion_12/index.html
+2026-11-11 11:49:25 | INFO | root | Crawl monitoring: {'completed': 14, 'total': 100, 'progress_percent': 14.0, 'elapsed_seconds': 16.08, 'pages_per_second': 0.87, 'eta_seconds': 98.78, 'active_tasks': 2}
+2026-11-11 11:49:26 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:26 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html
+2026-11-11 11:49:27 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/music_14/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:27 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/music_14/index.html
+2026-11-11 11:49:27 | INFO | root | Crawl monitoring: {'completed': 16, 'total': 100, 'progress_percent': 16.0, 'elapsed_seconds': 18.09, 'pages_per_second': 0.88, 'eta_seconds': 94.99, 'active_tasks': 3}
+2026-11-11 11:49:28 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/default_15/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:28 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/default_15/index.html
+2026-11-11 11:49:29 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:29 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html
+2026-11-11 11:49:29 | INFO | root | Crawl monitoring: {'completed': 18, 'total': 100, 'progress_percent': 18.0, 'elapsed_seconds': 20.1, 'pages_per_second': 0.9, 'eta_seconds': 91.55, 'active_tasks': 1}
+2026-11-11 11:49:30 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:30 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html
+2026-11-11 11:49:31 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:31 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html
+2026-11-11 11:49:31 | INFO | root | Crawl monitoring: {'completed': 20, 'total': 100, 'progress_percent': 20.0, 'elapsed_seconds': 22.11, 'pages_per_second': 0.9, 'eta_seconds': 88.43, 'active_tasks': 2}
+2026-11-11 11:49:32 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/fantasy_19/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:32 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/fantasy_19/index.html
+2026-11-11 11:49:33 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/new-adult_20/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:33 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/new-adult_20/index.html
+2026-11-11 11:49:34 | INFO | root | Crawl monitoring: {'completed': 22, 'total': 100, 'progress_percent': 22.0, 'elapsed_seconds': 24.11, 'pages_per_second': 0.91, 'eta_seconds': 85.5, 'active_tasks': 3}
+2026-11-11 11:49:34 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/young-adult_21/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:34 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/young-adult_21/index.html
+2026-11-11 11:49:35 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/science_22/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:35 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/science_22/index.html
+2026-11-11 11:49:36 | INFO | root | Crawl monitoring: {'completed': 24, 'total': 100, 'progress_percent': 24.0, 'elapsed_seconds': 26.12, 'pages_per_second': 0.92, 'eta_seconds': 82.73, 'active_tasks': 1}
+2026-11-11 11:49:36 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/poetry_23/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:36 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/poetry_23/index.html
+2026-11-11 11:49:37 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/paranormal_24/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:37 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/paranormal_24/index.html
+2026-11-11 11:49:38 | INFO | root | Crawl monitoring: {'completed': 26, 'total': 100, 'progress_percent': 26.0, 'elapsed_seconds': 28.13, 'pages_per_second': 0.92, 'eta_seconds': 80.05, 'active_tasks': 2}
+2026-11-11 11:49:38 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/art_25/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:38 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/art_25/index.html
+2026-11-11 11:49:39 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/psychology_26/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:39 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/psychology_26/index.html
+2026-11-11 11:49:40 | INFO | root | Crawl monitoring: {'completed': 28, 'total': 100, 'progress_percent': 28.0, 'elapsed_seconds': 30.14, 'pages_per_second': 0.93, 'eta_seconds': 77.5, 'active_tasks': 3}
+2026-11-11 11:49:40 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/autobiography_27/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:40 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/autobiography_27/index.html
+2026-11-11 11:49:41 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/parenting_28/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:41 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/parenting_28/index.html
+2026-11-11 11:49:42 | INFO | root | Crawl monitoring: {'completed': 30, 'total': 100, 'progress_percent': 30.0, 'elapsed_seconds': 32.15, 'pages_per_second': 0.93, 'eta_seconds': 75.02, 'active_tasks': 1}
+2026-11-11 11:49:42 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:42 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html
+2026-11-11 11:49:43 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/humor_30/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:43 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/humor_30/index.html
+2026-11-11 11:49:44 | INFO | root | Crawl monitoring: {'completed': 32, 'total': 100, 'progress_percent': 32.0, 'elapsed_seconds': 34.16, 'pages_per_second': 0.94, 'eta_seconds': 72.58, 'active_tasks': 2}
+2026-11-11 11:49:44 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/horror_31/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:44 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/horror_31/index.html
+2026-11-11 11:49:45 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/history_32/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:45 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/history_32/index.html
+2026-11-11 11:49:46 | INFO | root | Crawl monitoring: {'completed': 34, 'total': 100, 'progress_percent': 34.0, 'elapsed_seconds': 36.17, 'pages_per_second': 0.94, 'eta_seconds': 70.21, 'active_tasks': 3}
+2026-11-11 11:49:46 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:46 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html
+2026-11-11 11:49:47 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:47 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html
+2026-11-11 11:49:48 | INFO | root | Crawl monitoring: {'completed': 36, 'total': 100, 'progress_percent': 36.0, 'elapsed_seconds': 38.17, 'pages_per_second': 0.94, 'eta_seconds': 67.86, 'active_tasks': 1}
+2026-11-11 11:49:48 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/business_35/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:48 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/business_35/index.html
+2026-11-11 11:49:49 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/biography_36/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:49 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/biography_36/index.html
+2026-11-11 11:49:50 | INFO | root | Crawl monitoring: {'completed': 38, 'total': 100, 'progress_percent': 38.0, 'elapsed_seconds': 40.18, 'pages_per_second': 0.95, 'eta_seconds': 65.56, 'active_tasks': 2}
+2026-11-11 11:49:50 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/thriller_37/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:50 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/thriller_37/index.html
+2026-11-11 11:49:51 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/contemporary_38/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:51 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/contemporary_38/index.html
+2026-11-11 11:49:52 | INFO | root | Crawl monitoring: {'completed': 40, 'total': 100, 'progress_percent': 40.0, 'elapsed_seconds': 42.19, 'pages_per_second': 0.95, 'eta_seconds': 63.28, 'active_tasks': 3}
+2026-11-11 11:49:52 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/spirituality_39/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:52 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/spirituality_39/index.html
+2026-11-11 11:49:53 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/academic_40/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:53 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/academic_40/index.html
+2026-11-11 11:49:54 | INFO | root | Crawl monitoring: {'completed': 42, 'total': 100, 'progress_percent': 42.0, 'elapsed_seconds': 44.2, 'pages_per_second': 0.95, 'eta_seconds': 61.04, 'active_tasks': 1}
+2026-11-11 11:49:54 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/self-help_41/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:54 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/self-help_41/index.html
+2026-11-11 11:49:55 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical_42/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:55 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical_42/index.html
+2026-11-11 11:49:56 | INFO | root | Crawl monitoring: {'completed': 44, 'total': 100, 'progress_percent': 44.0, 'elapsed_seconds': 46.2, 'pages_per_second': 0.95, 'eta_seconds': 58.8, 'active_tasks': 2}
+2026-11-11 11:49:56 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/christian_43/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:56 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/christian_43/index.html
+2026-11-11 11:49:57 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/suspense_44/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:57 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/suspense_44/index.html
+2026-11-11 11:49:58 | INFO | root | Crawl monitoring: {'completed': 46, 'total': 100, 'progress_percent': 46.0, 'elapsed_seconds': 48.2, 'pages_per_second': 0.95, 'eta_seconds': 56.59, 'active_tasks': 3}
+2026-11-11 11:49:58 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/short-stories_45/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:58 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/short-stories_45/index.html
+2026-11-11 11:49:59 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/novels_46/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:49:59 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/novels_46/index.html
+2026-11-11 11:50:00 | INFO | root | Crawl monitoring: {'completed': 48, 'total': 100, 'progress_percent': 48.0, 'elapsed_seconds': 50.21, 'pages_per_second': 0.96, 'eta_seconds': 54.39, 'active_tasks': 1}
+2026-11-11 11:50:00 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/health_47/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:00 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/health_47/index.html
+2026-11-11 11:50:01 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/politics_48/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:01 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/politics_48/index.html
+2026-11-11 11:50:02 | INFO | root | Crawl monitoring: {'completed': 50, 'total': 100, 'progress_percent': 50.0, 'elapsed_seconds': 52.23, 'pages_per_second': 0.96, 'eta_seconds': 52.23, 'active_tasks': 2}
+2026-11-11 11:50:02 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/cultural_49/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:02 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/cultural_49/index.html
+2026-11-11 11:50:03 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/erotica_50/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:03 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/erotica_50/index.html
+2026-11-11 11:50:04 | INFO | root | Crawl monitoring: {'completed': 52, 'total': 100, 'progress_percent': 52.0, 'elapsed_seconds': 54.24, 'pages_per_second': 0.96, 'eta_seconds': 50.07, 'active_tasks': 3}
+2026-11-11 11:50:04 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/crime_51/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:04 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/crime_51/index.html
+2026-11-11 11:50:05 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:05 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html
+2026-11-11 11:50:06 | INFO | root | Crawl monitoring: {'completed': 54, 'total': 100, 'progress_percent': 54.0, 'elapsed_seconds': 56.24, 'pages_per_second': 0.96, 'eta_seconds': 47.91, 'active_tasks': 1}
+2026-11-11 11:50:06 | INFO | root | Fetching https://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:06 | INFO | root | Fetched https://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html
+2026-11-11 11:50:07 | INFO | root | Fetching https://books.toscrape.com/catalogue/soumission_998/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:07 | INFO | root | Fetched https://books.toscrape.com/catalogue/soumission_998/index.html
+2026-11-11 11:50:08 | INFO | root | Crawl monitoring: {'completed': 56, 'total': 100, 'progress_percent': 56.0, 'elapsed_seconds': 58.25, 'pages_per_second': 0.96, 'eta_seconds': 45.77, 'active_tasks': 2}
+2026-11-11 11:50:08 | INFO | root | Fetching https://books.toscrape.com/catalogue/sharp-objects_997/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:08 | INFO | root | Fetched https://books.toscrape.com/catalogue/sharp-objects_997/index.html
+2026-11-11 11:50:09 | INFO | root | Fetching https://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:09 | INFO | root | Fetched https://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html
+2026-11-11 11:50:10 | INFO | root | Crawl monitoring: {'completed': 58, 'total': 100, 'progress_percent': 58.0, 'elapsed_seconds': 60.25, 'pages_per_second': 0.96, 'eta_seconds': 43.63, 'active_tasks': 3}
+2026-11-11 11:50:10 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-requiem-red_995/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:10 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-requiem-red_995/index.html
+2026-11-11 11:50:11 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:11 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html
+2026-11-11 11:50:12 | INFO | root | Crawl monitoring: {'completed': 60, 'total': 100, 'progress_percent': 60.0, 'elapsed_seconds': 62.27, 'pages_per_second': 0.96, 'eta_seconds': 41.51, 'active_tasks': 1}
+2026-11-11 11:50:12 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:12 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html
+2026-11-11 11:50:13 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:13 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html
+2026-11-11 11:50:14 | INFO | root | Crawl monitoring: {'completed': 62, 'total': 100, 'progress_percent': 62.0, 'elapsed_seconds': 64.28, 'pages_per_second': 0.96, 'eta_seconds': 39.4, 'active_tasks': 2}
+2026-11-11 11:50:14 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-black-maria_991/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:14 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-black-maria_991/index.html
+2026-11-11 11:50:15 | INFO | root | Fetching https://books.toscrape.com/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:15 | INFO | root | Fetched https://books.toscrape.com/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html
+2026-11-11 11:50:16 | INFO | root | Crawl monitoring: {'completed': 64, 'total': 100, 'progress_percent': 64.0, 'elapsed_seconds': 66.29, 'pages_per_second': 0.97, 'eta_seconds': 37.29, 'active_tasks': 3}
+2026-11-11 11:50:16 | INFO | root | Fetching https://books.toscrape.com/catalogue/shakespeares-sonnets_989/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:16 | INFO | root | Fetched https://books.toscrape.com/catalogue/shakespeares-sonnets_989/index.html
+2026-11-11 11:50:17 | INFO | root | Fetching https://books.toscrape.com/catalogue/set-me-free_988/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:17 | INFO | root | Fetched https://books.toscrape.com/catalogue/set-me-free_988/index.html
+2026-11-11 11:50:18 | INFO | root | Crawl monitoring: {'completed': 66, 'total': 100, 'progress_percent': 66.0, 'elapsed_seconds': 68.3, 'pages_per_second': 0.97, 'eta_seconds': 35.18, 'active_tasks': 1}
+2026-11-11 11:50:18 | INFO | root | Fetching https://books.toscrape.com/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:18 | INFO | root | Fetched https://books.toscrape.com/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html
+2026-11-11 11:50:19 | INFO | root | Fetching https://books.toscrape.com/catalogue/rip-it-up-and-start-again_986/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:19 | INFO | root | Fetched https://books.toscrape.com/catalogue/rip-it-up-and-start-again_986/index.html
+2026-11-11 11:50:20 | INFO | root | Crawl monitoring: {'completed': 68, 'total': 100, 'progress_percent': 68.0, 'elapsed_seconds': 70.32, 'pages_per_second': 0.97, 'eta_seconds': 33.09, 'active_tasks': 2}
+2026-11-11 11:50:20 | INFO | root | Fetching https://books.toscrape.com/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:20 | INFO | root | Fetched https://books.toscrape.com/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html
+2026-11-11 11:50:21 | INFO | root | Fetching https://books.toscrape.com/catalogue/olio_984/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:22 | INFO | root | Crawl monitoring: {'completed': 69, 'total': 100, 'progress_percent': 69.0, 'elapsed_seconds': 72.32, 'pages_per_second': 0.95, 'eta_seconds': 32.49, 'active_tasks': 1}
+2026-11-11 11:50:24 | INFO | root | Crawl monitoring: {'completed': 69, 'total': 100, 'progress_percent': 69.0, 'elapsed_seconds': 74.33, 'pages_per_second': 0.93, 'eta_seconds': 33.4, 'active_tasks': 1}
+2026-11-11 11:50:26 | INFO | root | Crawl monitoring: {'completed': 69, 'total': 100, 'progress_percent': 69.0, 'elapsed_seconds': 76.34, 'pages_per_second': 0.9, 'eta_seconds': 34.3, 'active_tasks': 1}
+2026-11-11 11:50:28 | INFO | root | Crawl monitoring: {'completed': 69, 'total': 100, 'progress_percent': 69.0, 'elapsed_seconds': 78.35, 'pages_per_second': 0.88, 'eta_seconds': 35.2, 'active_tasks': 1}
+2026-11-11 11:50:30 | INFO | root | Crawl monitoring: {'completed': 69, 'total': 100, 'progress_percent': 69.0, 'elapsed_seconds': 80.37, 'pages_per_second': 0.86, 'eta_seconds': 36.11, 'active_tasks': 1}
+2026-11-11 11:50:31 | WARNING | src.retry_strategy | Attempt 1 failed (TransientError). Retrying in 1.00 seconds
+2026-11-11 11:50:32 | INFO | root | Crawl monitoring: {'completed': 69, 'total': 100, 'progress_percent': 69.0, 'elapsed_seconds': 82.38, 'pages_per_second': 0.84, 'eta_seconds': 37.01, 'active_tasks': 1}
+2026-11-11 11:50:32 | INFO | root | Fetching https://books.toscrape.com/catalogue/olio_984/index.html (attempt 2, timeout multiplier x2)
+2026-11-11 11:50:34 | INFO | root | Fetched https://books.toscrape.com/catalogue/olio_984/index.html
+2026-11-11 11:50:34 | INFO | src.retry_strategy | Retry succeeded on attempt 2
+2026-11-11 11:50:34 | INFO | root | Fetching https://books.toscrape.com/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:34 | INFO | root | Crawl monitoring: {'completed': 70, 'total': 100, 'progress_percent': 70.0, 'elapsed_seconds': 84.38, 'pages_per_second': 0.83, 'eta_seconds': 36.16, 'active_tasks': 3}
+2026-11-11 11:50:34 | INFO | root | Fetched https://books.toscrape.com/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html
+2026-11-11 11:50:35 | INFO | root | Fetching https://books.toscrape.com/catalogue/libertarianism-for-beginners_982/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:35 | INFO | root | Fetched https://books.toscrape.com/catalogue/libertarianism-for-beginners_982/index.html
+2026-11-11 11:50:36 | INFO | root | Fetching https://books.toscrape.com/catalogue/its-only-the-himalayas_981/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:36 | INFO | root | Crawl monitoring: {'completed': 72, 'total': 100, 'progress_percent': 72.0, 'elapsed_seconds': 86.39, 'pages_per_second': 0.83, 'eta_seconds': 33.59, 'active_tasks': 1}
+2026-11-11 11:50:36 | INFO | root | Fetched https://books.toscrape.com/catalogue/its-only-the-himalayas_981/index.html
+2026-11-11 11:50:37 | INFO | root | Fetching https://books.toscrape.com/catalogue/page-2.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:37 | INFO | root | Fetched https://books.toscrape.com/catalogue/page-2.html
+2026-11-11 11:50:38 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books_1/page-2.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:38 | INFO | root | Crawl monitoring: {'completed': 74, 'total': 100, 'progress_percent': 74.0, 'elapsed_seconds': 88.4, 'pages_per_second': 0.84, 'eta_seconds': 31.06, 'active_tasks': 2}
+2026-11-11 11:50:38 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books_1/page-2.html
+2026-11-11 11:50:39 | INFO | root | Fetching https://books.toscrape.com/catalogue/full-moon-over-noahs-ark-an-odyssey-to-mount-ararat-and-beyond_811/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:39 | INFO | root | Fetched https://books.toscrape.com/catalogue/full-moon-over-noahs-ark-an-odyssey-to-mount-ararat-and-beyond_811/index.html
+2026-11-11 11:50:40 | INFO | root | Fetching https://books.toscrape.com/catalogue/see-america-a-celebration-of-our-national-parks-treasured-sites_732/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:40 | INFO | root | Crawl monitoring: {'completed': 76, 'total': 100, 'progress_percent': 76.0, 'elapsed_seconds': 90.41, 'pages_per_second': 0.84, 'eta_seconds': 28.55, 'active_tasks': 3}
+2026-11-11 11:50:40 | INFO | root | Fetched https://books.toscrape.com/catalogue/see-america-a-celebration-of-our-national-parks-treasured-sites_732/index.html
+2026-11-11 11:50:41 | INFO | root | Fetching https://books.toscrape.com/catalogue/vagabonding-an-uncommon-guide-to-the-art-of-long-term-world-travel_552/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:41 | INFO | root | Fetched https://books.toscrape.com/catalogue/vagabonding-an-uncommon-guide-to-the-art-of-long-term-world-travel_552/index.html
+2026-11-11 11:50:42 | INFO | root | Fetching https://books.toscrape.com/catalogue/under-the-tuscan-sun_504/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:42 | INFO | root | Crawl monitoring: {'completed': 78, 'total': 100, 'progress_percent': 78.0, 'elapsed_seconds': 92.41, 'pages_per_second': 0.84, 'eta_seconds': 26.07, 'active_tasks': 1}
+2026-11-11 11:50:42 | INFO | root | Fetched https://books.toscrape.com/catalogue/under-the-tuscan-sun_504/index.html
+2026-11-11 11:50:43 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-summer-in-europe_458/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:43 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-summer-in-europe_458/index.html
+2026-11-11 11:50:44 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-great-railway-bazaar_446/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:44 | INFO | root | Crawl monitoring: {'completed': 80, 'total': 100, 'progress_percent': 80.0, 'elapsed_seconds': 94.42, 'pages_per_second': 0.85, 'eta_seconds': 23.61, 'active_tasks': 2}
+2026-11-11 11:50:44 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-great-railway-bazaar_446/index.html
+2026-11-11 11:50:45 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-year-in-provence-provence-1_421/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:45 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-year-in-provence-provence-1_421/index.html
+2026-11-11 11:50:46 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-road-to-little-dribbling-adventures-of-an-american-in-britain-notes-from-a-small-island-2_277/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:46 | INFO | root | Crawl monitoring: {'completed': 82, 'total': 100, 'progress_percent': 82.0, 'elapsed_seconds': 96.43, 'pages_per_second': 0.85, 'eta_seconds': 21.17, 'active_tasks': 3}
+2026-11-11 11:50:46 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-road-to-little-dribbling-adventures-of-an-american-in-britain-notes-from-a-small-island-2_277/index.html
+2026-11-11 11:50:47 | INFO | root | Fetching https://books.toscrape.com/catalogue/neither-here-nor-there-travels-in-europe_198/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:47 | INFO | root | Fetched https://books.toscrape.com/catalogue/neither-here-nor-there-travels-in-europe_198/index.html
+2026-11-11 11:50:48 | INFO | root | Fetching https://books.toscrape.com/catalogue/1000-places-to-see-before-you-die_1/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:48 | INFO | root | Crawl monitoring: {'completed': 84, 'total': 100, 'progress_percent': 84.0, 'elapsed_seconds': 98.45, 'pages_per_second': 0.85, 'eta_seconds': 18.75, 'active_tasks': 1}
+2026-11-11 11:50:48 | INFO | root | Fetched https://books.toscrape.com/catalogue/1000-places-to-see-before-you-die_1/index.html
+2026-11-11 11:50:49 | INFO | root | Fetching https://books.toscrape.com/catalogue/in-a-dark-dark-wood_963/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:49 | INFO | root | Fetched https://books.toscrape.com/catalogue/in-a-dark-dark-wood_963/index.html
+2026-11-11 11:50:50 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-past-never-ends_942/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:50 | INFO | root | Crawl monitoring: {'completed': 86, 'total': 100, 'progress_percent': 86.0, 'elapsed_seconds': 100.45, 'pages_per_second': 0.86, 'eta_seconds': 16.35, 'active_tasks': 2}
+2026-11-11 11:50:50 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-past-never-ends_942/index.html
+2026-11-11 11:50:51 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-murder-in-time_877/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:51 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-murder-in-time_877/index.html
+2026-11-11 11:50:52 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-murder-of-roger-ackroyd-hercule-poirot-4_852/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:52 | INFO | root | Crawl monitoring: {'completed': 88, 'total': 100, 'progress_percent': 88.0, 'elapsed_seconds': 102.46, 'pages_per_second': 0.86, 'eta_seconds': 13.97, 'active_tasks': 3}
+2026-11-11 11:50:52 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-murder-of-roger-ackroyd-hercule-poirot-4_852/index.html
+2026-11-11 11:50:53 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-last-mile-amos-decker-2_754/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:53 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-last-mile-amos-decker-2_754/index.html
+2026-11-11 11:50:54 | INFO | root | Fetching https://books.toscrape.com/catalogue/that-darkness-gardiner-and-renner-1_743/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:54 | INFO | root | Crawl monitoring: {'completed': 90, 'total': 100, 'progress_percent': 90.0, 'elapsed_seconds': 104.46, 'pages_per_second': 0.86, 'eta_seconds': 11.61, 'active_tasks': 1}
+2026-11-11 11:50:54 | INFO | root | Fetched https://books.toscrape.com/catalogue/that-darkness-gardiner-and-renner-1_743/index.html
+2026-11-11 11:50:55 | INFO | root | Fetching https://books.toscrape.com/catalogue/tastes-like-fear-di-marnie-rome-3_742/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:55 | INFO | root | Fetched https://books.toscrape.com/catalogue/tastes-like-fear-di-marnie-rome-3_742/index.html
+2026-11-11 11:50:56 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-time-of-torment-charlie-parker-14_657/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:56 | INFO | root | Crawl monitoring: {'completed': 92, 'total': 100, 'progress_percent': 92.0, 'elapsed_seconds': 106.48, 'pages_per_second': 0.86, 'eta_seconds': 9.26, 'active_tasks': 2}
+2026-11-11 11:50:56 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-time-of-torment-charlie-parker-14_657/index.html
+2026-11-11 11:50:57 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-study-in-scarlet-sherlock-holmes-1_656/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:57 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-study-in-scarlet-sherlock-holmes-1_656/index.html
+2026-11-11 11:50:58 | INFO | root | Fetching https://books.toscrape.com/catalogue/poisonous-max-revere-novels-3_627/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:58 | INFO | root | Crawl monitoring: {'completed': 94, 'total': 100, 'progress_percent': 94.0, 'elapsed_seconds': 108.49, 'pages_per_second': 0.87, 'eta_seconds': 6.92, 'active_tasks': 3}
+2026-11-11 11:50:58 | INFO | root | Fetched https://books.toscrape.com/catalogue/poisonous-max-revere-novels-3_627/index.html
+2026-11-11 11:50:59 | INFO | root | Fetching https://books.toscrape.com/catalogue/murder-at-the-42nd-street-library-raymond-ambler-1_624/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:50:59 | INFO | root | Fetched https://books.toscrape.com/catalogue/murder-at-the-42nd-street-library-raymond-ambler-1_624/index.html
+2026-11-11 11:51:00 | INFO | root | Fetching https://books.toscrape.com/catalogue/most-wanted_623/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:51:00 | INFO | root | Crawl monitoring: {'completed': 96, 'total': 100, 'progress_percent': 96.0, 'elapsed_seconds': 110.5, 'pages_per_second': 0.87, 'eta_seconds': 4.6, 'active_tasks': 1}
+2026-11-11 11:51:00 | INFO | root | Fetched https://books.toscrape.com/catalogue/most-wanted_623/index.html
+2026-11-11 11:51:01 | INFO | root | Fetching https://books.toscrape.com/catalogue/hide-away-eve-duncan-20_620/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:51:01 | INFO | root | Fetched https://books.toscrape.com/catalogue/hide-away-eve-duncan-20_620/index.html
+2026-11-11 11:51:02 | INFO | root | Fetching https://books.toscrape.com/catalogue/boar-island-anna-pigeon-19_613/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:51:02 | INFO | root | Crawl monitoring: {'completed': 98, 'total': 100, 'progress_percent': 98.0, 'elapsed_seconds': 112.51, 'pages_per_second': 0.87, 'eta_seconds': 2.3, 'active_tasks': 2}
+2026-11-11 11:51:02 | INFO | root | Fetched https://books.toscrape.com/catalogue/boar-island-anna-pigeon-19_613/index.html
+2026-11-11 11:51:03 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-widow_609/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:51:03 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-widow_609/index.html
+2026-11-11 11:54:13 | INFO | src.robots_parser | robots.txt unavailable (HTTP 404): https://books.toscrape.com/robots.txt
+2026-11-11 11:54:13 | INFO | root | Fetching https://books.toscrape.com/ (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:13 | INFO | root | Fetched https://books.toscrape.com/
+2026-11-11 11:54:14 | INFO | root | Crawl monitoring: {'completed': 1, 'total': 100, 'progress_percent': 1.0, 'elapsed_seconds': 2.0, 'pages_per_second': 0.5, 'eta_seconds': 198.21, 'active_tasks': 3}
+2026-11-11 11:54:14 | INFO | root | Fetching https://books.toscrape.com/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:14 | INFO | root | Fetched https://books.toscrape.com/index.html
+2026-11-11 11:54:15 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books_1/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:15 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books_1/index.html
+2026-11-11 11:54:16 | INFO | root | Crawl monitoring: {'completed': 3, 'total': 100, 'progress_percent': 3.0, 'elapsed_seconds': 4.0, 'pages_per_second': 0.75, 'eta_seconds': 129.46, 'active_tasks': 1}
+2026-11-11 11:54:16 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/travel_2/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:16 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+2026-11-11 11:54:17 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/mystery_3/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:17 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+2026-11-11 11:54:18 | INFO | root | Crawl monitoring: {'completed': 5, 'total': 100, 'progress_percent': 5.0, 'elapsed_seconds': 6.01, 'pages_per_second': 0.83, 'eta_seconds': 114.14, 'active_tasks': 2}
+2026-11-11 11:54:18 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:18 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+2026-11-11 11:54:19 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:19 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html
+2026-11-11 11:54:20 | INFO | root | Crawl monitoring: {'completed': 7, 'total': 100, 'progress_percent': 7.0, 'elapsed_seconds': 8.01, 'pages_per_second': 0.87, 'eta_seconds': 106.46, 'active_tasks': 3}
+2026-11-11 11:54:20 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/classics_6/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:20 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/classics_6/index.html
+2026-11-11 11:54:21 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:21 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+2026-11-11 11:54:22 | INFO | root | Crawl monitoring: {'completed': 9, 'total': 100, 'progress_percent': 9.0, 'elapsed_seconds': 10.02, 'pages_per_second': 0.9, 'eta_seconds': 101.28, 'active_tasks': 1}
+2026-11-11 11:54:22 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/romance_8/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:22 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/romance_8/index.html
+2026-11-11 11:54:23 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:23 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html
+2026-11-11 11:54:24 | INFO | root | Crawl monitoring: {'completed': 11, 'total': 100, 'progress_percent': 11.0, 'elapsed_seconds': 12.02, 'pages_per_second': 0.92, 'eta_seconds': 97.27, 'active_tasks': 2}
+2026-11-11 11:54:24 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/fiction_10/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:24 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/fiction_10/index.html
+2026-11-11 11:54:25 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/childrens_11/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:26 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/childrens_11/index.html
+2026-11-11 11:54:26 | INFO | root | Crawl monitoring: {'completed': 13, 'total': 100, 'progress_percent': 13.0, 'elapsed_seconds': 14.03, 'pages_per_second': 0.93, 'eta_seconds': 93.88, 'active_tasks': 3}
+2026-11-11 11:54:26 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/religion_12/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:26 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/religion_12/index.html
+2026-11-11 11:54:27 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:28 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/nonfiction_13/index.html
+2026-11-11 11:54:28 | INFO | root | Crawl monitoring: {'completed': 15, 'total': 100, 'progress_percent': 15.0, 'elapsed_seconds': 16.03, 'pages_per_second': 0.94, 'eta_seconds': 90.86, 'active_tasks': 1}
+2026-11-11 11:54:28 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/music_14/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:28 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/music_14/index.html
+2026-11-11 11:54:29 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/default_15/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:30 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/default_15/index.html
+2026-11-11 11:54:30 | INFO | root | Crawl monitoring: {'completed': 17, 'total': 100, 'progress_percent': 17.0, 'elapsed_seconds': 18.04, 'pages_per_second': 0.94, 'eta_seconds': 88.07, 'active_tasks': 2}
+2026-11-11 11:54:30 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:30 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/science-fiction_16/index.html
+2026-11-11 11:54:31 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:31 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sports-and-games_17/index.html
+2026-11-11 11:54:32 | INFO | root | Crawl monitoring: {'completed': 19, 'total': 100, 'progress_percent': 19.0, 'elapsed_seconds': 20.04, 'pages_per_second': 0.95, 'eta_seconds': 85.44, 'active_tasks': 3}
+2026-11-11 11:54:32 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:33 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/add-a-comment_18/index.html
+2026-11-11 11:54:33 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/fantasy_19/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:34 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/fantasy_19/index.html
+2026-11-11 11:54:34 | INFO | root | Crawl monitoring: {'completed': 21, 'total': 100, 'progress_percent': 21.0, 'elapsed_seconds': 22.06, 'pages_per_second': 0.95, 'eta_seconds': 82.98, 'active_tasks': 1}
+2026-11-11 11:54:34 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/new-adult_20/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:34 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/new-adult_20/index.html
+2026-11-11 11:54:35 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/young-adult_21/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:36 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/young-adult_21/index.html
+2026-11-11 11:54:36 | INFO | root | Crawl monitoring: {'completed': 23, 'total': 100, 'progress_percent': 23.0, 'elapsed_seconds': 24.06, 'pages_per_second': 0.96, 'eta_seconds': 80.55, 'active_tasks': 2}
+2026-11-11 11:54:36 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/science_22/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:37 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/science_22/index.html
+2026-11-11 11:54:37 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/poetry_23/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:38 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/poetry_23/index.html
+2026-11-11 11:54:38 | INFO | root | Crawl monitoring: {'completed': 25, 'total': 100, 'progress_percent': 25.0, 'elapsed_seconds': 26.06, 'pages_per_second': 0.96, 'eta_seconds': 78.18, 'active_tasks': 3}
+2026-11-11 11:54:38 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/paranormal_24/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:39 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/paranormal_24/index.html
+2026-11-11 11:54:39 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/art_25/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:40 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/art_25/index.html
+2026-11-11 11:54:40 | INFO | root | Crawl monitoring: {'completed': 27, 'total': 100, 'progress_percent': 27.0, 'elapsed_seconds': 28.07, 'pages_per_second': 0.96, 'eta_seconds': 75.9, 'active_tasks': 1}
+2026-11-11 11:54:40 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/psychology_26/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:41 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/psychology_26/index.html
+2026-11-11 11:54:41 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/autobiography_27/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:42 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/autobiography_27/index.html
+2026-11-11 11:54:42 | INFO | root | Crawl monitoring: {'completed': 29, 'total': 100, 'progress_percent': 29.0, 'elapsed_seconds': 30.08, 'pages_per_second': 0.96, 'eta_seconds': 73.64, 'active_tasks': 2}
+2026-11-11 11:54:42 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/parenting_28/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:43 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/parenting_28/index.html
+2026-11-11 11:54:43 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:44 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/adult-fiction_29/index.html
+2026-11-11 11:54:44 | INFO | root | Crawl monitoring: {'completed': 31, 'total': 100, 'progress_percent': 31.0, 'elapsed_seconds': 32.09, 'pages_per_second': 0.97, 'eta_seconds': 71.43, 'active_tasks': 3}
+2026-11-11 11:54:44 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/humor_30/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:45 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/humor_30/index.html
+2026-11-11 11:54:45 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/horror_31/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:46 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/horror_31/index.html
+2026-11-11 11:54:46 | INFO | root | Crawl monitoring: {'completed': 33, 'total': 100, 'progress_percent': 33.0, 'elapsed_seconds': 34.1, 'pages_per_second': 0.97, 'eta_seconds': 69.24, 'active_tasks': 1}
+2026-11-11 11:54:46 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/history_32/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:47 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/history_32/index.html
+2026-11-11 11:54:47 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:48 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/food-and-drink_33/index.html
+2026-11-11 11:54:48 | INFO | root | Crawl monitoring: {'completed': 35, 'total': 100, 'progress_percent': 35.0, 'elapsed_seconds': 36.12, 'pages_per_second': 0.97, 'eta_seconds': 67.07, 'active_tasks': 2}
+2026-11-11 11:54:48 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:49 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/christian-fiction_34/index.html
+2026-11-11 11:54:49 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/business_35/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:50 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/business_35/index.html
+2026-11-11 11:54:50 | INFO | root | Crawl monitoring: {'completed': 37, 'total': 100, 'progress_percent': 37.0, 'elapsed_seconds': 38.12, 'pages_per_second': 0.97, 'eta_seconds': 64.91, 'active_tasks': 3}
+2026-11-11 11:54:50 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/biography_36/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:51 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/biography_36/index.html
+2026-11-11 11:54:51 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/thriller_37/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:52 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/thriller_37/index.html
+2026-11-11 11:54:52 | INFO | root | Crawl monitoring: {'completed': 39, 'total': 100, 'progress_percent': 39.0, 'elapsed_seconds': 40.13, 'pages_per_second': 0.97, 'eta_seconds': 62.76, 'active_tasks': 1}
+2026-11-11 11:54:52 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/contemporary_38/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:53 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/contemporary_38/index.html
+2026-11-11 11:54:53 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/spirituality_39/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:54 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/spirituality_39/index.html
+2026-11-11 11:54:54 | INFO | root | Crawl monitoring: {'completed': 41, 'total': 100, 'progress_percent': 41.0, 'elapsed_seconds': 42.13, 'pages_per_second': 0.97, 'eta_seconds': 60.63, 'active_tasks': 2}
+2026-11-11 11:54:54 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/academic_40/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:55 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/academic_40/index.html
+2026-11-11 11:54:55 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/self-help_41/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:56 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/self-help_41/index.html
+2026-11-11 11:54:56 | INFO | root | Crawl monitoring: {'completed': 43, 'total': 100, 'progress_percent': 43.0, 'elapsed_seconds': 44.15, 'pages_per_second': 0.97, 'eta_seconds': 58.52, 'active_tasks': 3}
+2026-11-11 11:54:56 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical_42/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:57 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical_42/index.html
+2026-11-11 11:54:57 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/christian_43/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:58 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/christian_43/index.html
+2026-11-11 11:54:58 | INFO | root | Crawl monitoring: {'completed': 45, 'total': 100, 'progress_percent': 45.0, 'elapsed_seconds': 46.15, 'pages_per_second': 0.98, 'eta_seconds': 56.41, 'active_tasks': 1}
+2026-11-11 11:54:58 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/suspense_44/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:54:59 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/suspense_44/index.html
+2026-11-11 11:54:59 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/short-stories_45/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:00 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/short-stories_45/index.html
+2026-11-11 11:55:00 | INFO | root | Crawl monitoring: {'completed': 47, 'total': 100, 'progress_percent': 47.0, 'elapsed_seconds': 48.16, 'pages_per_second': 0.98, 'eta_seconds': 54.3, 'active_tasks': 2}
+2026-11-11 11:55:00 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/novels_46/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:01 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/novels_46/index.html
+2026-11-11 11:55:01 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/health_47/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:02 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/health_47/index.html
+2026-11-11 11:55:02 | INFO | root | Crawl monitoring: {'completed': 49, 'total': 100, 'progress_percent': 49.0, 'elapsed_seconds': 50.16, 'pages_per_second': 0.98, 'eta_seconds': 52.21, 'active_tasks': 3}
+2026-11-11 11:55:02 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/politics_48/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:03 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/politics_48/index.html
+2026-11-11 11:55:03 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/cultural_49/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:04 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/cultural_49/index.html
+2026-11-11 11:55:04 | INFO | root | Crawl monitoring: {'completed': 51, 'total': 100, 'progress_percent': 51.0, 'elapsed_seconds': 52.17, 'pages_per_second': 0.98, 'eta_seconds': 50.13, 'active_tasks': 1}
+2026-11-11 11:55:04 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/erotica_50/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:05 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/erotica_50/index.html
+2026-11-11 11:55:05 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/crime_51/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:06 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/crime_51/index.html
+2026-11-11 11:55:06 | INFO | root | Crawl monitoring: {'completed': 53, 'total': 100, 'progress_percent': 53.0, 'elapsed_seconds': 54.18, 'pages_per_second': 0.98, 'eta_seconds': 48.05, 'active_tasks': 2}
+2026-11-11 11:55:06 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:07 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html
+2026-11-11 11:55:07 | INFO | root | Fetching https://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:08 | INFO | root | Fetched https://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html
+2026-11-11 11:55:08 | INFO | root | Crawl monitoring: {'completed': 55, 'total': 100, 'progress_percent': 55.0, 'elapsed_seconds': 56.19, 'pages_per_second': 0.98, 'eta_seconds': 45.98, 'active_tasks': 3}
+2026-11-11 11:55:08 | INFO | root | Fetching https://books.toscrape.com/catalogue/soumission_998/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:09 | INFO | root | Fetched https://books.toscrape.com/catalogue/soumission_998/index.html
+2026-11-11 11:55:09 | INFO | root | Fetching https://books.toscrape.com/catalogue/sharp-objects_997/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:10 | INFO | root | Fetched https://books.toscrape.com/catalogue/sharp-objects_997/index.html
+2026-11-11 11:55:10 | INFO | root | Crawl monitoring: {'completed': 57, 'total': 100, 'progress_percent': 57.0, 'elapsed_seconds': 58.2, 'pages_per_second': 0.98, 'eta_seconds': 43.9, 'active_tasks': 1}
+2026-11-11 11:55:10 | INFO | root | Fetching https://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:11 | INFO | root | Fetched https://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html
+2026-11-11 11:55:11 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-requiem-red_995/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:12 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-requiem-red_995/index.html
+2026-11-11 11:55:12 | INFO | root | Crawl monitoring: {'completed': 59, 'total': 100, 'progress_percent': 59.0, 'elapsed_seconds': 60.2, 'pages_per_second': 0.98, 'eta_seconds': 41.84, 'active_tasks': 2}
+2026-11-11 11:55:12 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:13 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html
+2026-11-11 11:55:14 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:14 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html
+2026-11-11 11:55:14 | INFO | root | Crawl monitoring: {'completed': 61, 'total': 100, 'progress_percent': 61.0, 'elapsed_seconds': 62.21, 'pages_per_second': 0.98, 'eta_seconds': 39.77, 'active_tasks': 3}
+2026-11-11 11:55:15 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:15 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html
+2026-11-11 11:55:16 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-black-maria_991/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:16 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-black-maria_991/index.html
+2026-11-11 11:55:16 | INFO | root | Crawl monitoring: {'completed': 63, 'total': 100, 'progress_percent': 63.0, 'elapsed_seconds': 64.22, 'pages_per_second': 0.98, 'eta_seconds': 37.72, 'active_tasks': 1}
+2026-11-11 11:55:17 | INFO | root | Fetching https://books.toscrape.com/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:17 | INFO | root | Fetched https://books.toscrape.com/catalogue/starving-hearts-triangular-trade-trilogy-1_990/index.html
+2026-11-11 11:55:18 | INFO | root | Fetching https://books.toscrape.com/catalogue/shakespeares-sonnets_989/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:18 | INFO | root | Fetched https://books.toscrape.com/catalogue/shakespeares-sonnets_989/index.html
+2026-11-11 11:55:18 | INFO | root | Crawl monitoring: {'completed': 65, 'total': 100, 'progress_percent': 65.0, 'elapsed_seconds': 66.22, 'pages_per_second': 0.98, 'eta_seconds': 35.66, 'active_tasks': 2}
+2026-11-11 11:55:19 | INFO | root | Fetching https://books.toscrape.com/catalogue/set-me-free_988/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:19 | INFO | root | Fetched https://books.toscrape.com/catalogue/set-me-free_988/index.html
+2026-11-11 11:55:20 | INFO | root | Fetching https://books.toscrape.com/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:20 | INFO | root | Fetched https://books.toscrape.com/catalogue/scott-pilgrims-precious-little-life-scott-pilgrim-1_987/index.html
+2026-11-11 11:55:20 | INFO | root | Crawl monitoring: {'completed': 67, 'total': 100, 'progress_percent': 67.0, 'elapsed_seconds': 68.22, 'pages_per_second': 0.98, 'eta_seconds': 33.6, 'active_tasks': 3}
+2026-11-11 11:55:21 | INFO | root | Fetching https://books.toscrape.com/catalogue/rip-it-up-and-start-again_986/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:21 | INFO | root | Fetched https://books.toscrape.com/catalogue/rip-it-up-and-start-again_986/index.html
+2026-11-11 11:55:22 | INFO | root | Fetching https://books.toscrape.com/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:22 | INFO | root | Fetched https://books.toscrape.com/catalogue/our-band-could-be-your-life-scenes-from-the-american-indie-underground-1981-1991_985/index.html
+2026-11-11 11:55:22 | INFO | root | Crawl monitoring: {'completed': 69, 'total': 100, 'progress_percent': 69.0, 'elapsed_seconds': 70.23, 'pages_per_second': 0.98, 'eta_seconds': 31.55, 'active_tasks': 1}
+2026-11-11 11:55:23 | INFO | root | Fetching https://books.toscrape.com/catalogue/olio_984/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:23 | INFO | root | Fetched https://books.toscrape.com/catalogue/olio_984/index.html
+2026-11-11 11:55:24 | INFO | root | Fetching https://books.toscrape.com/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:24 | INFO | root | Fetched https://books.toscrape.com/catalogue/mesaerion-the-best-science-fiction-stories-1800-1849_983/index.html
+2026-11-11 11:55:24 | INFO | root | Crawl monitoring: {'completed': 71, 'total': 100, 'progress_percent': 71.0, 'elapsed_seconds': 72.23, 'pages_per_second': 0.98, 'eta_seconds': 29.5, 'active_tasks': 2}
+2026-11-11 11:55:25 | INFO | root | Fetching https://books.toscrape.com/catalogue/libertarianism-for-beginners_982/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:25 | INFO | root | Fetched https://books.toscrape.com/catalogue/libertarianism-for-beginners_982/index.html
+2026-11-11 11:55:26 | INFO | root | Fetching https://books.toscrape.com/catalogue/its-only-the-himalayas_981/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:26 | INFO | root | Fetched https://books.toscrape.com/catalogue/its-only-the-himalayas_981/index.html
+2026-11-11 11:55:26 | INFO | root | Crawl monitoring: {'completed': 73, 'total': 100, 'progress_percent': 73.0, 'elapsed_seconds': 74.24, 'pages_per_second': 0.98, 'eta_seconds': 27.46, 'active_tasks': 3}
+2026-11-11 11:55:27 | INFO | root | Fetching https://books.toscrape.com/catalogue/page-2.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:27 | INFO | root | Fetched https://books.toscrape.com/catalogue/page-2.html
+2026-11-11 11:55:28 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books_1/page-2.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:28 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books_1/page-2.html
+2026-11-11 11:55:28 | INFO | root | Crawl monitoring: {'completed': 75, 'total': 100, 'progress_percent': 75.0, 'elapsed_seconds': 76.24, 'pages_per_second': 0.98, 'eta_seconds': 25.41, 'active_tasks': 1}
+2026-11-11 11:55:29 | INFO | root | Fetching https://books.toscrape.com/catalogue/full-moon-over-noahs-ark-an-odyssey-to-mount-ararat-and-beyond_811/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:29 | INFO | root | Fetched https://books.toscrape.com/catalogue/full-moon-over-noahs-ark-an-odyssey-to-mount-ararat-and-beyond_811/index.html
+2026-11-11 11:55:30 | INFO | root | Fetching https://books.toscrape.com/catalogue/see-america-a-celebration-of-our-national-parks-treasured-sites_732/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:30 | INFO | root | Fetched https://books.toscrape.com/catalogue/see-america-a-celebration-of-our-national-parks-treasured-sites_732/index.html
+2026-11-11 11:55:30 | INFO | root | Crawl monitoring: {'completed': 77, 'total': 100, 'progress_percent': 77.0, 'elapsed_seconds': 78.24, 'pages_per_second': 0.98, 'eta_seconds': 23.37, 'active_tasks': 2}
+2026-11-11 11:55:31 | INFO | root | Fetching https://books.toscrape.com/catalogue/vagabonding-an-uncommon-guide-to-the-art-of-long-term-world-travel_552/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:31 | INFO | root | Fetched https://books.toscrape.com/catalogue/vagabonding-an-uncommon-guide-to-the-art-of-long-term-world-travel_552/index.html
+2026-11-11 11:55:32 | INFO | root | Fetching https://books.toscrape.com/catalogue/under-the-tuscan-sun_504/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:32 | INFO | root | Fetched https://books.toscrape.com/catalogue/under-the-tuscan-sun_504/index.html
+2026-11-11 11:55:32 | INFO | root | Crawl monitoring: {'completed': 79, 'total': 100, 'progress_percent': 79.0, 'elapsed_seconds': 80.25, 'pages_per_second': 0.98, 'eta_seconds': 21.33, 'active_tasks': 3}
+2026-11-11 11:55:33 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-summer-in-europe_458/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:33 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-summer-in-europe_458/index.html
+2026-11-11 11:55:34 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-great-railway-bazaar_446/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:34 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-great-railway-bazaar_446/index.html
+2026-11-11 11:55:34 | INFO | root | Crawl monitoring: {'completed': 81, 'total': 100, 'progress_percent': 81.0, 'elapsed_seconds': 82.25, 'pages_per_second': 0.98, 'eta_seconds': 19.29, 'active_tasks': 1}
+2026-11-11 11:55:35 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-year-in-provence-provence-1_421/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:35 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-year-in-provence-provence-1_421/index.html
+2026-11-11 11:55:36 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-road-to-little-dribbling-adventures-of-an-american-in-britain-notes-from-a-small-island-2_277/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:36 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-road-to-little-dribbling-adventures-of-an-american-in-britain-notes-from-a-small-island-2_277/index.html
+2026-11-11 11:55:36 | INFO | root | Crawl monitoring: {'completed': 83, 'total': 100, 'progress_percent': 83.0, 'elapsed_seconds': 84.26, 'pages_per_second': 0.99, 'eta_seconds': 17.26, 'active_tasks': 2}
+2026-11-11 11:55:37 | INFO | root | Fetching https://books.toscrape.com/catalogue/neither-here-nor-there-travels-in-europe_198/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:37 | INFO | root | Fetched https://books.toscrape.com/catalogue/neither-here-nor-there-travels-in-europe_198/index.html
+2026-11-11 11:55:38 | INFO | root | Fetching https://books.toscrape.com/catalogue/1000-places-to-see-before-you-die_1/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:38 | INFO | root | Fetched https://books.toscrape.com/catalogue/1000-places-to-see-before-you-die_1/index.html
+2026-11-11 11:55:38 | INFO | root | Crawl monitoring: {'completed': 85, 'total': 100, 'progress_percent': 85.0, 'elapsed_seconds': 86.26, 'pages_per_second': 0.99, 'eta_seconds': 15.22, 'active_tasks': 3}
+2026-11-11 11:55:39 | INFO | root | Fetching https://books.toscrape.com/catalogue/in-a-dark-dark-wood_963/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:39 | INFO | root | Fetched https://books.toscrape.com/catalogue/in-a-dark-dark-wood_963/index.html
+2026-11-11 11:55:40 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-past-never-ends_942/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:40 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-past-never-ends_942/index.html
+2026-11-11 11:55:40 | INFO | root | Crawl monitoring: {'completed': 87, 'total': 100, 'progress_percent': 87.0, 'elapsed_seconds': 88.27, 'pages_per_second': 0.99, 'eta_seconds': 13.19, 'active_tasks': 1}
+2026-11-11 11:55:41 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-murder-in-time_877/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:41 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-murder-in-time_877/index.html
+2026-11-11 11:55:42 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-murder-of-roger-ackroyd-hercule-poirot-4_852/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:42 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-murder-of-roger-ackroyd-hercule-poirot-4_852/index.html
+2026-11-11 11:55:42 | INFO | root | Crawl monitoring: {'completed': 89, 'total': 100, 'progress_percent': 89.0, 'elapsed_seconds': 90.29, 'pages_per_second': 0.99, 'eta_seconds': 11.16, 'active_tasks': 2}
+2026-11-11 11:55:43 | INFO | root | Fetching https://books.toscrape.com/catalogue/the-last-mile-amos-decker-2_754/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:43 | INFO | root | Fetched https://books.toscrape.com/catalogue/the-last-mile-amos-decker-2_754/index.html
+2026-11-11 11:55:44 | INFO | root | Fetching https://books.toscrape.com/catalogue/that-darkness-gardiner-and-renner-1_743/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:44 | INFO | root | Fetched https://books.toscrape.com/catalogue/that-darkness-gardiner-and-renner-1_743/index.html
+2026-11-11 11:55:44 | INFO | root | Crawl monitoring: {'completed': 91, 'total': 100, 'progress_percent': 91.0, 'elapsed_seconds': 92.3, 'pages_per_second': 0.99, 'eta_seconds': 9.13, 'active_tasks': 3}
+2026-11-11 11:55:45 | INFO | root | Fetching https://books.toscrape.com/catalogue/tastes-like-fear-di-marnie-rome-3_742/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:45 | INFO | root | Fetched https://books.toscrape.com/catalogue/tastes-like-fear-di-marnie-rome-3_742/index.html
+2026-11-11 11:55:46 | INFO | root | Fetching https://books.toscrape.com/catalogue/a-time-of-torment-charlie-parker-14_657/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:55:46 | INFO | root | Fetched https://books.toscrape.com/catalogue/a-time-of-torment-charlie-parker-14_657/index.html
+2026-11-11 11:55:46 | INFO | root | Crawl monitoring: {'completed': 93, 'total': 100, 'progress_percent': 93.0, 'elapsed_seconds': 94.31, 'pages_per_second': 0.99, 'eta_seconds': 7.1, 'active_tasks': 1}
+2026-11-11 11:57:49 | INFO | src.robots_parser | robots.txt unavailable (HTTP 404): https://books.toscrape.com/robots.txt
+2026-11-11 11:57:49 | INFO | root | Fetching https://books.toscrape.com/ (attempt 1, timeout multiplier x1)
+2026-11-11 11:57:50 | INFO | root | Fetched https://books.toscrape.com/
+2026-11-11 11:57:51 | INFO | root | Fetching https://books.toscrape.com/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:57:51 | INFO | root | Crawl monitoring: {'completed': 1, 'total': 100, 'progress_percent': 1.0, 'elapsed_seconds': 2.01, 'pages_per_second': 0.5, 'eta_seconds': 198.94, 'active_tasks': 3}
+2026-11-11 11:57:51 | INFO | root | Fetched https://books.toscrape.com/index.html
+2026-11-11 11:57:52 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books_1/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:57:52 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books_1/index.html
+2026-11-11 11:57:53 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/travel_2/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:57:53 | INFO | root | Crawl monitoring: {'completed': 3, 'total': 100, 'progress_percent': 3.0, 'elapsed_seconds': 4.02, 'pages_per_second': 0.75, 'eta_seconds': 129.96, 'active_tasks': 1}
+2026-11-11 11:57:53 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+2026-11-11 11:57:54 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/mystery_3/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:57:54 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+2026-11-11 11:57:55 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:57:55 | INFO | root | Crawl monitoring: {'completed': 5, 'total': 100, 'progress_percent': 5.0, 'elapsed_seconds': 6.03, 'pages_per_second': 0.83, 'eta_seconds': 114.58, 'active_tasks': 2}
+2026-11-11 11:57:55 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+2026-11-11 11:57:56 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:57:56 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html
+2026-11-11 11:57:57 | INFO | root | Crawl monitoring: {'completed': 7, 'total': 100, 'progress_percent': 7.0, 'elapsed_seconds': 8.04, 'pages_per_second': 0.87, 'eta_seconds': 106.84, 'active_tasks': 3}
+2026-11-11 11:57:57 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/classics_6/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:57:57 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/classics_6/index.html
+2026-11-11 11:57:58 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:57:58 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+2026-11-11 11:59:01 | INFO | src.robots_parser | robots.txt unavailable (HTTP 404): https://books.toscrape.com/robots.txt
+2026-11-11 11:59:01 | INFO | root | Fetching https://books.toscrape.com/ (attempt 1, timeout multiplier x1)
+2026-11-11 11:59:02 | INFO | root | Fetched https://books.toscrape.com/
+2026-11-11 11:59:02 | INFO | root | Crawl monitoring: {'completed': 1, 'total': 10, 'progress_percent': 10.0, 'elapsed_seconds': 2.01, 'pages_per_second': 0.5, 'eta_seconds': 18.13, 'active_tasks': 3}
+2026-11-11 11:59:02 | INFO | root | Fetching https://books.toscrape.com/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:59:03 | INFO | root | Fetched https://books.toscrape.com/index.html
+2026-11-11 11:59:03 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books_1/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:59:04 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books_1/index.html
+2026-11-11 11:59:04 | INFO | root | Crawl monitoring: {'completed': 3, 'total': 10, 'progress_percent': 30.0, 'elapsed_seconds': 4.03, 'pages_per_second': 0.74, 'eta_seconds': 9.4, 'active_tasks': 1}
+2026-11-11 11:59:04 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/travel_2/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:59:05 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+2026-11-11 11:59:05 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/mystery_3/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:59:06 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+2026-11-11 11:59:06 | INFO | root | Crawl monitoring: {'completed': 5, 'total': 10, 'progress_percent': 50.0, 'elapsed_seconds': 6.04, 'pages_per_second': 0.83, 'eta_seconds': 6.04, 'active_tasks': 2}
+2026-11-11 11:59:06 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:59:07 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+2026-11-11 11:59:07 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:59:08 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html
+2026-11-11 11:59:08 | INFO | root | Crawl monitoring: {'completed': 7, 'total': 10, 'progress_percent': 70.0, 'elapsed_seconds': 8.05, 'pages_per_second': 0.87, 'eta_seconds': 3.45, 'active_tasks': 3}
+2026-11-11 11:59:08 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/classics_6/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:59:09 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/classics_6/index.html
+2026-11-11 11:59:09 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:59:10 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+2026-11-11 11:59:10 | INFO | root | Crawl monitoring: {'completed': 9, 'total': 10, 'progress_percent': 90.0, 'elapsed_seconds': 10.06, 'pages_per_second': 0.89, 'eta_seconds': 1.12, 'active_tasks': 1}
+2026-11-11 11:59:10 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/romance_8/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 11:59:11 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/romance_8/index.html
+2026-11-11 13:50:19 | INFO | src.robots_parser | robots.txt unavailable (HTTP 404): https://books.toscrape.com/robots.txt
+2026-11-11 13:50:19 | INFO | root | Fetching https://books.toscrape.com/ (attempt 1, timeout multiplier x1)
+2026-11-11 13:50:19 | INFO | root | Fetched https://books.toscrape.com/
+2026-11-11 13:50:19 | INFO | root | Fetching https://books.toscrape.com/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 13:50:20 | INFO | root | Fetched https://books.toscrape.com/index.html
+2026-11-11 13:50:20 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books_1/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 13:50:20 | INFO | root | Crawl monitoring: {'completed': 2, 'total': 10, 'progress_percent': 20.0, 'elapsed_seconds': 2.01, 'pages_per_second': 0.99, 'eta_seconds': 8.05, 'active_tasks': 2}
+2026-11-11 13:50:20 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books_1/index.html
+2026-11-11 13:50:20 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/travel_2/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 13:50:20 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+2026-11-11 13:50:21 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/mystery_3/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 13:50:21 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+2026-11-11 13:50:21 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 13:50:22 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+2026-11-11 13:50:22 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 13:50:22 | INFO | root | Crawl monitoring: {'completed': 6, 'total': 10, 'progress_percent': 60.0, 'elapsed_seconds': 4.03, 'pages_per_second': 1.49, 'eta_seconds': 2.68, 'active_tasks': 1}
+2026-11-11 13:50:22 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html
+2026-11-11 13:50:22 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/classics_6/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 13:50:23 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/classics_6/index.html
+2026-11-11 13:50:23 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 13:50:23 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+2026-11-11 13:50:23 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/romance_8/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 13:50:24 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/romance_8/index.html
+2026-11-11 14:31:52 | INFO | src.robots_parser | robots.txt unavailable (HTTP 404): https://books.toscrape.com/robots.txt
+2026-11-11 14:31:52 | INFO | root | Fetching https://books.toscrape.com/ (attempt 1, timeout multiplier x1)
+2026-11-11 14:31:52 | INFO | root | Fetched https://books.toscrape.com/
+2026-11-11 14:31:53 | INFO | root | Crawl monitoring: {'completed': 1, 'total': 10, 'progress_percent': 10.0, 'elapsed_seconds': 2.0, 'pages_per_second': 0.5, 'eta_seconds': 18.01, 'active_tasks': 3}
+2026-11-11 14:31:53 | INFO | root | Fetching https://books.toscrape.com/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 14:31:53 | INFO | root | Fetched https://books.toscrape.com/index.html
+2026-11-11 14:31:54 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books_1/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 14:31:54 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books_1/index.html
+2026-11-11 14:31:55 | INFO | root | Crawl monitoring: {'completed': 3, 'total': 10, 'progress_percent': 30.0, 'elapsed_seconds': 4.0, 'pages_per_second': 0.75, 'eta_seconds': 9.34, 'active_tasks': 1}
+2026-11-11 14:31:55 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/travel_2/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 14:31:55 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+2026-11-11 14:31:56 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/mystery_3/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 14:31:56 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/mystery_3/index.html
+2026-11-11 14:31:57 | INFO | root | Crawl monitoring: {'completed': 5, 'total': 10, 'progress_percent': 50.0, 'elapsed_seconds': 6.02, 'pages_per_second': 0.83, 'eta_seconds': 6.02, 'active_tasks': 2}
+2026-11-11 14:31:57 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 14:31:57 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html
+2026-11-11 14:31:58 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 14:31:58 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html
+2026-11-11 14:31:59 | INFO | root | Crawl monitoring: {'completed': 7, 'total': 10, 'progress_percent': 70.0, 'elapsed_seconds': 8.02, 'pages_per_second': 0.87, 'eta_seconds': 3.44, 'active_tasks': 3}
+2026-11-11 14:31:59 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/classics_6/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 14:31:59 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/classics_6/index.html
+2026-11-11 14:32:00 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 14:32:00 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html
+2026-11-11 14:32:01 | INFO | root | Crawl monitoring: {'completed': 9, 'total': 10, 'progress_percent': 90.0, 'elapsed_seconds': 10.03, 'pages_per_second': 0.9, 'eta_seconds': 1.11, 'active_tasks': 1}
+2026-11-11 14:32:01 | INFO | root | Fetching https://books.toscrape.com/catalogue/category/books/romance_8/index.html (attempt 1, timeout multiplier x1)
+2026-11-11 14:32:01 | INFO | root | Fetched https://books.toscrape.com/catalogue/category/books/romance_8/index.html
+2026-11-11 14:32:02 | INFO | src.storage | SQLite batch saved: 10 records
