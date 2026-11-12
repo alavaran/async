@@ -4,7 +4,7 @@ import logging
 import random
 import re
 import time
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from urllib.parse import urlparse
 
 import aiohttp
@@ -223,7 +223,7 @@ class AsyncCrawler:
             "text": page.get("text", ""),
             "links": page.get("links", []),
             "metadata": page.get("metadata", {}),
-            "crawled_at": datetime.now(UTC).isoformat(),
+            "crawled_at": datetime.now(timezone.utc).isoformat(),
             "status_code": http_metadata.get("status_code"),
             "content_type": http_metadata.get("content_type"),
         }
@@ -499,6 +499,9 @@ class AsyncCrawler:
         _retry_attempt: int = 0,
     ) -> str:
         """Perform one HTTP request and classify its errors."""
+        if not hasattr(self, "response_metadata"):
+            self.response_metadata = {}
+
         domain = urlparse(url).netloc
 
         await self.semaphore_manager.acquire(domain)
@@ -541,21 +544,23 @@ class AsyncCrawler:
                 timeout_multiplier,
             )
 
+            self.response_metadata[url] = {
+                "status_code": None,
+                "content_type": None,
+            }
+
             try:
                 async with self.session.get(
                     url,
                     timeout=timeout,
                 ) as response:
-                    response.raise_for_status()
-                    content = await response.text()
-
-                    if not hasattr(self, "response_metadata"):
-                        self.response_metadata = {}
-
                     self.response_metadata[url] = {
                         "status_code": response.status,
                         "content_type": response.headers.get("Content-Type"),
                     }
+
+                    response.raise_for_status()
+                    content = await response.text()
 
                     logger.info("Fetched %s", url)
                     return content

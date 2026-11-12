@@ -106,7 +106,7 @@ class AdvancedCrawler:
     def export_to_json(self, filename: str) -> None:
         """Экспортирует статистику crawler в JSON."""
         ReportExporter.export_json(
-            self.get_stats(),
+            self.results,
             filename,
         )
 

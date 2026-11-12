@@ -1,12 +1,12 @@
 
 from collections import Counter
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from urllib.parse import urlparse
 
 
 class CrawlerStats:
     def __init__(self):
-        self.started_at = datetime.now(UTC)
+        self.started_at = datetime.now(timezone.utc)
         self.finished_at = None
 
         self.pages_processed = 0
@@ -40,11 +40,11 @@ class CrawlerStats:
 
     def finish(self) -> None:
         """Фиксирует время завершения обхода."""
-        self.finished_at = datetime.now(UTC)
+        self.finished_at = datetime.now(timezone.utc)
 
     @property
     def runtime(self) -> float:
-        end_time = self.finished_at or datetime.now(UTC)
+        end_time = self.finished_at or datetime.now(timezone.utc)
         return (end_time - self.started_at).total_seconds()
 
     @property
